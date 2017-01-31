@@ -1,4 +1,4 @@
-# iengage-client.InteractionApi
+# iengage_client.InteractionApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -47,15 +47,15 @@ Allows the user to share interaction without attachment. Returns the interaction
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_title = 'interaction_title_example' # str | Interaction Title
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -110,15 +110,15 @@ Allows the user to share interaction with attachment. Returns the interaction ob
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 body3 = 'body_example' # str | interactionTitle
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -126,7 +126,7 @@ client_token = 'client_token_example' # str | Use the Client Token. Please gener
 body = 789 # int | categoryId (optional)
 body2 = 'body_example' # str | Interaction Type (optional)
 body4 = 'body_example' # str | interactionDescription (optional)
-body5 = [iengage-client.Attachment()] # list[Attachment] |  (optional)
+body5 = [iengage_client.Attachment()] # list[Attachment] |  (optional)
 
 try: 
     # Share interaction with attachment
@@ -175,15 +175,15 @@ Allows the user to response the interaction
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 response = 'response_example' # str | response
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -236,15 +236,15 @@ Creates a interaction category. Returns the created interaction category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_type = 'interaction_type_example' # str | Interaction Type
 name = 'name_example' # str | Name
 description = 'description_example' # str | description
@@ -301,15 +301,15 @@ Allows the user to delete a interaction. Returns the deleted response
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -360,15 +360,15 @@ Allows the user to delete the interaction category. Returns the deleted interact
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -419,15 +419,15 @@ Allows the user to delete an response. Returns the deleted response
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 response_id = 789 # int | responseId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -478,15 +478,15 @@ Allows the user to dislike the response.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 response_id = 789 # int | responseId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -539,15 +539,15 @@ Returns the list of interactions shared by friends
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_status = 'interaction_status_example' # str | Interaction status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -606,15 +606,15 @@ Returns the interaction by id
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -665,15 +665,15 @@ Returns the list of interaction categories
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -728,15 +728,15 @@ Returns the list of all interactions visible to the user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_status = 'interaction_status_example' # str | Interaction status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -795,15 +795,15 @@ Returns the list of recommended interactions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -858,15 +858,15 @@ Returns the list of recommended interactions from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -921,15 +921,15 @@ Returns the list of recommended users from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -984,15 +984,15 @@ Returns the list of responses by interactionId
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1047,15 +1047,15 @@ Returns the list of interactions shared by specific user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 user_id = 789 # int | userId
 interaction_status = 'interaction_status_example' # str | Interaction status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1116,15 +1116,15 @@ Returns the list of interaction categories subscribed by the user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 user_id = 789 # int | userId
 interaction_type = 'interaction_type_example' # str | interactionType
 start = 56 # int | start, initial value start from 0
@@ -1181,15 +1181,15 @@ Returns the list of interactions subscribed by specific user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 user_id = 789 # int | userId
 interaction_status = 'interaction_status_example' # str | Interaction status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1250,15 +1250,15 @@ Allows the user to like the response.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 response_id = 789 # int | responseId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1311,15 +1311,15 @@ Marks the response as accepted. This means the user is satisfied with the respon
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 response_id = 789 # int | responseId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1372,15 +1372,15 @@ Returns the list of matching interactions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 search_text = 'search_text_example' # str | Search Text, keywords to search
 interaction_status = 'interaction_status_example' # str | Interaction status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1439,15 +1439,15 @@ Returns the subscribed interaction category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1498,15 +1498,15 @@ Allows the user to subscribe a interaction
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1557,15 +1557,15 @@ Unmarks the response. This will remove the marked response.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 response_id = 789 # int | responseId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1618,15 +1618,15 @@ Returns the unsubscribed interaction category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1677,15 +1677,15 @@ Allows the user to unsubscribe a interaction
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1736,15 +1736,15 @@ Allows the user to update interaction. Returns the updated interaction
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 interaction_title = 'interaction_title_example' # str | Interaction Title
 interaction_description = 'interaction_description_example' # str | Describe Interaction
@@ -1799,15 +1799,15 @@ Allows the user to update the interaction category. Returns the updated interact
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 category_id = 789 # int | categoryId
 category_name = 'category_name_example' # str | Category Name
 category_description = 'category_description_example' # str | Describe category
@@ -1862,15 +1862,15 @@ Allows the user to update an response. Returns the updated response
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.InteractionApi()
+api_instance = iengage_client.InteractionApi()
 response_id = 789 # int | responseId
 response = 'response_example' # str | response
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user

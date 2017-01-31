@@ -1,4 +1,4 @@
-# iengage-client.AugmentedIntelligenceApi
+# iengage_client.AugmentedIntelligenceApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -21,15 +21,15 @@ Classifies text to question, complaint or suggestion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.AugmentedIntelligenceApi()
+api_instance = iengage_client.AugmentedIntelligenceApi()
 text = 'text_example' # str | Text to be classified
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -78,15 +78,15 @@ Return the most popular tag of given interaction type
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.AugmentedIntelligenceApi()
+api_instance = iengage_client.AugmentedIntelligenceApi()
 start_time = 789 # int | start time
 end_time = 789 # int | end time
 start = 56 # int | start
@@ -147,15 +147,15 @@ Returns the sum of the sentiment count of given interaction type
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.AugmentedIntelligenceApi()
+api_instance = iengage_client.AugmentedIntelligenceApi()
 start_time = 789 # int | start time
 end_time = 789 # int | end time
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -210,15 +210,15 @@ Return the list of tag entity sentiments
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.AugmentedIntelligenceApi()
+api_instance = iengage_client.AugmentedIntelligenceApi()
 tag_name = 'tag_name_example' # str | tag name
 start_time = 789 # int | start time
 end_time = 789 # int | end time

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_request_for_me_list import VerveResponseRequestForMeList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_request_for_me_list import VerveResponseRequestForMeList
 
 
 class TestVerveResponseRequestForMeList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseRequestForMeList(unittest.TestCase):
         """
         Test VerveResponseRequestForMeList
         """
-        model = iengage-client.models.verve_response_request_for_me_list.VerveResponseRequestForMeList()
+        model = iengage_client.models.verve_response_request_for_me_list.VerveResponseRequestForMeList()
 
 
 if __name__ == '__main__':

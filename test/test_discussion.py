@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.discussion import Discussion
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.discussion import Discussion
 
 
 class TestDiscussion(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestDiscussion(unittest.TestCase):
         """
         Test Discussion
         """
-        model = iengage-client.models.discussion.Discussion()
+        model = iengage_client.models.discussion.Discussion()
 
 
 if __name__ == '__main__':

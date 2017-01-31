@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.comment import Comment
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.comment import Comment
 
 
 class TestComment(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestComment(unittest.TestCase):
         """
         Test Comment
         """
-        model = iengage-client.models.comment.Comment()
+        model = iengage_client.models.comment.Comment()
 
 
 if __name__ == '__main__':

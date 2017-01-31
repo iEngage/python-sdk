@@ -1,4 +1,4 @@
-# iengage-client.GroupApi
+# iengage_client.GroupApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -28,15 +28,15 @@ Allows the uer to create a group. Returns the created group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 organization_id = 789 # int | organization Id
 title = 'title_example' # str | title
 description = 'description_example' # str | description
@@ -93,15 +93,15 @@ Allows the user to delete a group. Returns the deleted group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -152,15 +152,15 @@ Allows the user to follow a group. Returns the followed group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -211,15 +211,15 @@ Returns the list of followers for the group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -274,15 +274,15 @@ Returns the list of all ideas in a group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -337,15 +337,15 @@ Returns the list of groups
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -398,15 +398,15 @@ Returns the list of recommended groups
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -459,15 +459,15 @@ Returns the list of groups the user is following
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -522,15 +522,15 @@ Returns the list of matching group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 query = 'query_example' # str | query
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -585,15 +585,15 @@ Allows the user to unfollow a group. Returns the unfollowed group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -644,15 +644,15 @@ Allows the user to update the group. Returns the updated group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.GroupApi()
+api_instance = iengage_client.GroupApi()
 group_id = 789 # int | groupId
 title = 'title_example' # str | title
 description = 'description_example' # str | description

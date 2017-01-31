@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.multimedia import Multimedia
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.multimedia import Multimedia
 
 
 class TestMultimedia(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestMultimedia(unittest.TestCase):
         """
         Test Multimedia
         """
-        model = iengage-client.models.multimedia.Multimedia()
+        model = iengage_client.models.multimedia.Multimedia()
 
 
 if __name__ == '__main__':

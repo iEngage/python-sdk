@@ -20,7 +20,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import iengage-client 
+import iengage_client 
 ```
 
 ### Setuptools
@@ -34,7 +34,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import iengage-client
+import iengage_client
 ```
 
 ## Getting Started
@@ -44,14 +44,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
-api_instance = iengage-client.AugmentedIntelligenceApi()
+api_instance = iengage_client.AugmentedIntelligenceApi()
 text = 'text_example' # str | Text to be classified
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate

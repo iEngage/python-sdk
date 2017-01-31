@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.sentiment_analytics import SentimentAnalytics
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.sentiment_analytics import SentimentAnalytics
 
 
 class TestSentimentAnalytics(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestSentimentAnalytics(unittest.TestCase):
         """
         Test SentimentAnalytics
         """
-        model = iengage-client.models.sentiment_analytics.SentimentAnalytics()
+        model = iengage_client.models.sentiment_analytics.SentimentAnalytics()
 
 
 if __name__ == '__main__':

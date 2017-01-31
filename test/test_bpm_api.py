@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.bpm_api import BPMApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.bpm_api import BPMApi
 
 
 class TestBPMApi(unittest.TestCase):
     """ BPMApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.bpm_api.BPMApi()
+        self.api = iengage_client.apis.bpm_api.BPMApi()
 
     def tearDown(self):
         pass

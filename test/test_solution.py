@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.solution import Solution
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.solution import Solution
 
 
 class TestSolution(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestSolution(unittest.TestCase):
         """
         Test Solution
         """
-        model = iengage-client.models.solution.Solution()
+        model = iengage_client.models.solution.Solution()
 
 
 if __name__ == '__main__':

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_notification_list import VerveResponseNotificationList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_notification_list import VerveResponseNotificationList
 
 
 class TestVerveResponseNotificationList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseNotificationList(unittest.TestCase):
         """
         Test VerveResponseNotificationList
         """
-        model = iengage-client.models.verve_response_notification_list.VerveResponseNotificationList()
+        model = iengage_client.models.verve_response_notification_list.VerveResponseNotificationList()
 
 
 if __name__ == '__main__':

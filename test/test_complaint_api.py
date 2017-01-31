@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.complaint_api import ComplaintApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.complaint_api import ComplaintApi
 
 
 class TestComplaintApi(unittest.TestCase):
     """ ComplaintApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.complaint_api.ComplaintApi()
+        self.api = iengage_client.apis.complaint_api.ComplaintApi()
 
     def tearDown(self):
         pass

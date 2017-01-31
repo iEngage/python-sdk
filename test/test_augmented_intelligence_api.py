@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.augmented_intelligence_api import AugmentedIntelligenceApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.augmented_intelligence_api import AugmentedIntelligenceApi
 
 
 class TestAugmentedIntelligenceApi(unittest.TestCase):
     """ AugmentedIntelligenceApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.augmented_intelligence_api.AugmentedIntelligenceApi()
+        self.api = iengage_client.apis.augmented_intelligence_api.AugmentedIntelligenceApi()
 
     def tearDown(self):
         pass

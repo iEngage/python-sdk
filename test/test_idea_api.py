@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.idea_api import IdeaApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.idea_api import IdeaApi
 
 
 class TestIdeaApi(unittest.TestCase):
     """ IdeaApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.idea_api.IdeaApi()
+        self.api = iengage_client.apis.idea_api.IdeaApi()
 
     def tearDown(self):
         pass

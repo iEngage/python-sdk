@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.nlc import NLC
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.nlc import NLC
 
 
 class TestNLC(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestNLC(unittest.TestCase):
         """
         Test NLC
         """
-        model = iengage-client.models.nlc.NLC()
+        model = iengage_client.models.nlc.NLC()
 
 
 if __name__ == '__main__':

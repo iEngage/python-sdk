@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_milestone import VerveResponseMilestone
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_milestone import VerveResponseMilestone
 
 
 class TestVerveResponseMilestone(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseMilestone(unittest.TestCase):
         """
         Test VerveResponseMilestone
         """
-        model = iengage-client.models.verve_response_milestone.VerveResponseMilestone()
+        model = iengage_client.models.verve_response_milestone.VerveResponseMilestone()
 
 
 if __name__ == '__main__':

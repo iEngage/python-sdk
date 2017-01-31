@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.rewards_api import RewardsApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.rewards_api import RewardsApi
 
 
 class TestRewardsApi(unittest.TestCase):
     """ RewardsApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.rewards_api.RewardsApi()
+        self.api = iengage_client.apis.rewards_api.RewardsApi()
 
     def tearDown(self):
         pass

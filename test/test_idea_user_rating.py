@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.idea_user_rating import IdeaUserRating
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.idea_user_rating import IdeaUserRating
 
 
 class TestIdeaUserRating(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestIdeaUserRating(unittest.TestCase):
         """
         Test IdeaUserRating
         """
-        model = iengage-client.models.idea_user_rating.IdeaUserRating()
+        model = iengage_client.models.idea_user_rating.IdeaUserRating()
 
 
 if __name__ == '__main__':

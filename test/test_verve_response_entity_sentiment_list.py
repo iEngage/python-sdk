@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_entity_sentiment_list import VerveResponseEntitySentimentList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_entity_sentiment_list import VerveResponseEntitySentimentList
 
 
 class TestVerveResponseEntitySentimentList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseEntitySentimentList(unittest.TestCase):
         """
         Test VerveResponseEntitySentimentList
         """
-        model = iengage-client.models.verve_response_entity_sentiment_list.VerveResponseEntitySentimentList()
+        model = iengage_client.models.verve_response_entity_sentiment_list.VerveResponseEntitySentimentList()
 
 
 if __name__ == '__main__':

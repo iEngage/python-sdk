@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.organization import Organization
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.organization import Organization
 
 
 class TestOrganization(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestOrganization(unittest.TestCase):
         """
         Test Organization
         """
-        model = iengage-client.models.organization.Organization()
+        model = iengage_client.models.organization.Organization()
 
 
 if __name__ == '__main__':

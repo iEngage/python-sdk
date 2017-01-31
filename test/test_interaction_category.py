@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.interaction_category import InteractionCategory
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.interaction_category import InteractionCategory
 
 
 class TestInteractionCategory(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestInteractionCategory(unittest.TestCase):
         """
         Test InteractionCategory
         """
-        model = iengage-client.models.interaction_category.InteractionCategory()
+        model = iengage_client.models.interaction_category.InteractionCategory()
 
 
 if __name__ == '__main__':

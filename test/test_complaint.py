@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.complaint import Complaint
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.complaint import Complaint
 
 
 class TestComplaint(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestComplaint(unittest.TestCase):
         """
         Test Complaint
         """
-        model = iengage-client.models.complaint.Complaint()
+        model = iengage_client.models.complaint.Complaint()
 
 
 if __name__ == '__main__':

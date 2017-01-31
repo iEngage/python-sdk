@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.project_management_api import ProjectManagementApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.project_management_api import ProjectManagementApi
 
 
 class TestProjectManagementApi(unittest.TestCase):
     """ ProjectManagementApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.project_management_api.ProjectManagementApi()
+        self.api = iengage_client.apis.project_management_api.ProjectManagementApi()
 
     def tearDown(self):
         pass

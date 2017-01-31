@@ -1,4 +1,4 @@
-# iengage-client.SocialApi
+# iengage_client.SocialApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -29,15 +29,15 @@ Allows the user to add friend. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 id1 = 'id1_example' # str | Enter userId/mailId of the person who wants to add a friend
 id2 = 'id2_example' # str | Enter userId /mailId you want to add in friend list
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -88,15 +88,15 @@ Allows the user to confirm/ignore friend request. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId of user who sent friend request
 status = 56 # int | Set Friend Request status <br/> CONFIRM - 1  <br/> IGNORE - 2 
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -147,15 +147,15 @@ Allows to follow a user. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 follower = 'follower_example' # str | Enter the userId/mailId of the follower
 followee = 'followee_example' # str | Enter the userId/mailId of the user the follower wants to follow
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -206,15 +206,15 @@ Returns the user.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | User Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -265,15 +265,15 @@ Returns the user details.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | Enter user Id whose details you need
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -322,15 +322,15 @@ Returns the list of followers
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -381,15 +381,15 @@ Returns the list of users that are being followed
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -440,15 +440,15 @@ Returns the list of friends
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -499,15 +499,15 @@ Allows the user to remove friend. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 id1 = 'id1_example' # str | Enter userId/mailId of the person who wants to remove from friend
 id2 = 'id2_example' # str | Enter userId /mailId you want to remove in friend list
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -558,15 +558,15 @@ Allows user to send a friend request. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 user_id = 789 # int | Enter userId /mailId you want to send friend request
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -615,15 +615,15 @@ Returns the list of friend requests
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
@@ -670,15 +670,15 @@ Allows to unfollow user. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.SocialApi()
+api_instance = iengage_client.SocialApi()
 unfollower = 'unfollower_example' # str | Enter the userId/mailId of the unfollower
 unfollowee = 'unfollowee_example' # str | Enter the userId/mailId of the user the unfollower wants to unfollow
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user

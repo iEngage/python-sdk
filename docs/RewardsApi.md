@@ -1,4 +1,4 @@
-# iengage-client.RewardsApi
+# iengage_client.RewardsApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -20,15 +20,15 @@ Returns the list top friends
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.RewardsApi()
+api_instance = iengage_client.RewardsApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -81,15 +81,15 @@ Returns the list of top users
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.RewardsApi()
+api_instance = iengage_client.RewardsApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -140,15 +140,15 @@ Returns the list of user points
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.RewardsApi()
+api_instance = iengage_client.RewardsApi()
 user_id = 789 # int | userId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate

@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.collaboration_api import CollaborationApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.collaboration_api import CollaborationApi
 
 
 class TestCollaborationApi(unittest.TestCase):
     """ CollaborationApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.collaboration_api.CollaborationApi()
+        self.api = iengage_client.apis.collaboration_api.CollaborationApi()
 
     def tearDown(self):
         pass

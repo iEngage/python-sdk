@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.user_points import UserPoints
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.user_points import UserPoints
 
 
 class TestUserPoints(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestUserPoints(unittest.TestCase):
         """
         Test UserPoints
         """
-        model = iengage-client.models.user_points.UserPoints()
+        model = iengage_client.models.user_points.UserPoints()
 
 
 if __name__ == '__main__':

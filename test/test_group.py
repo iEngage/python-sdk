@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.group import Group
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.group import Group
 
 
 class TestGroup(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestGroup(unittest.TestCase):
         """
         Test Group
         """
-        model = iengage-client.models.group.Group()
+        model = iengage_client.models.group.Group()
 
 
 if __name__ == '__main__':

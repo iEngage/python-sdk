@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.media_type import MediaType
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.media_type import MediaType
 
 
 class TestMediaType(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestMediaType(unittest.TestCase):
         """
         Test MediaType
         """
-        model = iengage-client.models.media_type.MediaType()
+        model = iengage_client.models.media_type.MediaType()
 
 
 if __name__ == '__main__':

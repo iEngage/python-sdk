@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.data_source import DataSource
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.data_source import DataSource
 
 
 class TestDataSource(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestDataSource(unittest.TestCase):
         """
         Test DataSource
         """
-        model = iengage-client.models.data_source.DataSource()
+        model = iengage_client.models.data_source.DataSource()
 
 
 if __name__ == '__main__':

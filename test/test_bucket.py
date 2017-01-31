@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.bucket import Bucket
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.bucket import Bucket
 
 
 class TestBucket(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestBucket(unittest.TestCase):
         """
         Test Bucket
         """
-        model = iengage-client.models.bucket.Bucket()
+        model = iengage_client.models.bucket.Bucket()
 
 
 if __name__ == '__main__':

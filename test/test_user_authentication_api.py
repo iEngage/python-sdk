@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.user_authentication_api import UserAuthenticationApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.user_authentication_api import UserAuthenticationApi
 
 
 class TestUserAuthenticationApi(unittest.TestCase):
     """ UserAuthenticationApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.user_authentication_api.UserAuthenticationApi()
+        self.api = iengage_client.apis.user_authentication_api.UserAuthenticationApi()
 
     def tearDown(self):
         pass

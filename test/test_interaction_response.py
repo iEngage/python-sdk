@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.interaction_response import InteractionResponse
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.interaction_response import InteractionResponse
 
 
 class TestInteractionResponse(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestInteractionResponse(unittest.TestCase):
         """
         Test InteractionResponse
         """
-        model = iengage-client.models.interaction_response.InteractionResponse()
+        model = iengage_client.models.interaction_response.InteractionResponse()
 
 
 if __name__ == '__main__':

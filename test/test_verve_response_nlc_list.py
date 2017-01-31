@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_nlc_list import VerveResponseNLCList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_nlc_list import VerveResponseNLCList
 
 
 class TestVerveResponseNLCList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseNLCList(unittest.TestCase):
         """
         Test VerveResponseNLCList
         """
-        model = iengage-client.models.verve_response_nlc_list.VerveResponseNLCList()
+        model = iengage_client.models.verve_response_nlc_list.VerveResponseNLCList()
 
 
 if __name__ == '__main__':

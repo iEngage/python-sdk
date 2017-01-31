@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_question_category_list import VerveResponseQuestionCategoryList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_question_category_list import VerveResponseQuestionCategoryList
 
 
 class TestVerveResponseQuestionCategoryList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseQuestionCategoryList(unittest.TestCase):
         """
         Test VerveResponseQuestionCategoryList
         """
-        model = iengage-client.models.verve_response_question_category_list.VerveResponseQuestionCategoryList()
+        model = iengage_client.models.verve_response_question_category_list.VerveResponseQuestionCategoryList()
 
 
 if __name__ == '__main__':

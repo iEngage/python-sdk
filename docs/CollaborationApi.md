@@ -1,4 +1,4 @@
-# iengage-client.CollaborationApi
+# iengage_client.CollaborationApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -39,15 +39,15 @@ Allows the user to give comment on posted Blog. Returns the comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blogId
 comment_text = 'comment_text_example' # str | Comment Text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -98,15 +98,15 @@ Allows the user to comment on discussion. Returns the comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussionId
 comment_text = 'comment_text_example' # str | Comment Text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -157,15 +157,15 @@ Allows the user to delete blog. Returns the deleted blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blog Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -214,15 +214,15 @@ Allows the user to delete blog comment.  Returns the deleted blog comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 comment_id = 789 # int | comment Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -271,15 +271,15 @@ Allows the user to delete discussion. Returns the deleted discussion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussion Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -328,15 +328,15 @@ Allows the user to delete discussion comment. Returns the deleted discussion com
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 comment_id = 789 # int | comment Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -385,15 +385,15 @@ Returns the list of comments on blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blogId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -446,15 +446,15 @@ Returns the list of blogs
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 organization_id = 789 # int | organizationId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -509,15 +509,15 @@ Returns the list of comments on discussion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussionId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -570,15 +570,15 @@ Returns the list of discussions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 organization_id = 789 # int | organizationId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -633,15 +633,15 @@ Returns the list of blogs subscribed by user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -696,15 +696,15 @@ Returns the list of discussions subscribed by user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -759,15 +759,15 @@ Allows the user to post a blog. Returns the posted blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 organization_id = 789 # int | organizationId
 blog_title = 'blog_title_example' # str | blogTitle
 blog_description = 'blog_description_example' # str | blogDescription
@@ -820,15 +820,15 @@ Allows the user to start discussion. Returns the started discussion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 organization_id = 789 # int | organizationId
 subject = 'subject_example' # str | subject
 description = 'description_example' # str | description
@@ -881,15 +881,15 @@ Allows the user to subscribe to blog. Returns the subscribed blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blogId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -938,15 +938,15 @@ Allows the user to subscribe to a discussion. Returns the subscribed discussion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -995,15 +995,15 @@ Allows the user to unsubscribe blog. Returns the unsubscribed blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blogId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1052,15 +1052,15 @@ Allows the user to unsubscribe to a discussion. Returns the unsubscribed discuss
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1109,15 +1109,15 @@ Allows the user to update blog. Returns the updated blog
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 blog_id = 789 # int | blogId
 blog_title = 'blog_title_example' # str | blog title
 blog_description = 'blog_description_example' # str | blog description
@@ -1170,15 +1170,15 @@ Allows the user to update blog comment. Returns the updated blog comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 comment_id = 789 # int | commentId
 comment_text = 'comment_text_example' # str | comment text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1229,15 +1229,15 @@ Allows the user to update discussion. Returns the updated discussion
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 discussion_id = 789 # int | discussionId
 subject = 'subject_example' # str | subject
 discussion_description = 'discussion_description_example' # str | discussion Description
@@ -1290,15 +1290,15 @@ Allows the user to update discussion comment. Returns the updated discussion com
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.CollaborationApi()
+api_instance = iengage_client.CollaborationApi()
 comment_id = 789 # int | commentId
 comment_text = 'comment_text_example' # str | comment text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user

@@ -1,4 +1,4 @@
-# iengage-client.ProjectManagementApi
+# iengage_client.ProjectManagementApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -30,15 +30,15 @@ Allows the user to comment on milestone. Returns the comments
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
 comment_text = 'comment_text_example' # str | commentText
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -89,15 +89,15 @@ Allows  the user to comment on task. Returns the task comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 comment_text = 'comment_text_example' # str | commentText
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -148,15 +148,15 @@ Allows the user to create milestone. Returns the created milestone
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 title = 'title_example' # str | title
 description = 'description_example' # str | description
 due_date = 'due_date_example' # str | Due date(Format: MM-dd-yyyy HH:mm:ss a)
@@ -215,15 +215,15 @@ Allows user to create task. Returns the created task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 title = 'title_example' # str | title
 description = 'description_example' # str | description
 priority = 56 # int | Task priority <br/> 1 - HIGH <br/> 2 - LOW <br/> 3 - NORMAL
@@ -286,15 +286,15 @@ Allows the user to delete milestone. Returns the deleted milestone
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -345,15 +345,15 @@ Allows the user to delete task. Returns the deleted task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -404,15 +404,15 @@ Returns the list of milestones
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
@@ -463,15 +463,15 @@ Returns the list comments written on milestone
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -520,15 +520,15 @@ Returns the list of comments written on task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -577,15 +577,15 @@ Returns the list of task assigned to user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 user_id = 789 # int | userId
 status = 56 # int | Task status <br/> 0 - ALL <br/> 1 - OPEN <br/> 2 - PERCENT_TWENTY <br/> 3 - PERCENT_FORTY <br/> 4 - PERCENT_SIXTY <br/> 5 - PERCENT_EIGHTY <br/> 6 - RESOLVED <br/> 7 - REOPENED
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -638,15 +638,15 @@ Allows the user to update milestone. Returns the updated milestone
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
 title = 'title_example' # str | title
 description = 'description_example' # str | description
@@ -703,15 +703,15 @@ Allows the user to update task. Returns the updated task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 title = 'title_example' # str | title
 description = 'description_example' # str | description
@@ -772,15 +772,15 @@ Allows the user to update task status. Returns the updated task status
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ProjectManagementApi()
+api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 status = 56 # int | Task status <br/> 1 - OPEN <br/> 2 - PERCENT_TWENTY <br/> 3 - PERCENT_FORTY <br/> 4 - PERCENT_SIXTY <br/> 5 - PERCENT_EIGHTY <br/> 6 - RESOLVED <br/> 7 - REOPENED
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user

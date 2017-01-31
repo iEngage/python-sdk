@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.data_flavor import DataFlavor
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.data_flavor import DataFlavor
 
 
 class TestDataFlavor(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestDataFlavor(unittest.TestCase):
         """
         Test DataFlavor
         """
-        model = iengage-client.models.data_flavor.DataFlavor()
+        model = iengage_client.models.data_flavor.DataFlavor()
 
 
 if __name__ == '__main__':

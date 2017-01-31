@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.notification import Notification
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.notification import Notification
 
 
 class TestNotification(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestNotification(unittest.TestCase):
         """
         Test Notification
         """
-        model = iengage-client.models.notification.Notification()
+        model = iengage_client.models.notification.Notification()
 
 
 if __name__ == '__main__':

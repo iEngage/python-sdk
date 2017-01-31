@@ -1,4 +1,4 @@
-# iengage-client.BPMApi
+# iengage_client.BPMApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -24,15 +24,15 @@ Assign BPM task, It will return task object
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 assignee_user_id = 789 # int | assigneeUserId - assign to this user
 task_id = 789 # int | taskId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -89,15 +89,15 @@ Complete BPM task, It will return task object
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId whose task want to complete
 task_id = 789 # int | taskId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -154,15 +154,15 @@ Return the BPM task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId
 task_id = 789 # int | taskId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -215,15 +215,15 @@ Return the list of BPM task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId
 search_string = 'search_string_example' # str | searchString
 completed = true # bool | 1) true - Completed <br/> 2) false - Pending <br/>
@@ -288,15 +288,15 @@ Return the list of BPM task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId whose task want to see
 entity_id = 789 # int | entityId
 completed = true # bool | 1) true - Completed <br/> 2) false - Pending <br/>
@@ -357,15 +357,15 @@ Return the list of BPM task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId whose task want to see
 completed = true # bool | 1) true - Completed <br/> 2) false - Pending <br/> 3) Blank - All
 start = 56 # int | start, initial value start from 0
@@ -426,15 +426,15 @@ Return the list of BPM task
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.BPMApi()
+api_instance = iengage_client.BPMApi()
 user_id = 789 # int | userId whose task want to see
 completed = true # bool | 1) true - Completed <br/> 2) false - Pending <br/> 3) Blank - All
 start = 56 # int | start, initial value start from 0

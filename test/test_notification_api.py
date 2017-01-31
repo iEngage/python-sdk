@@ -17,16 +17,16 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.apis.notification_api import NotificationApi
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.apis.notification_api import NotificationApi
 
 
 class TestNotificationApi(unittest.TestCase):
     """ NotificationApi unit test stubs """
 
     def setUp(self):
-        self.api = iengage-client.apis.notification_api.NotificationApi()
+        self.api = iengage_client.apis.notification_api.NotificationApi()
 
     def tearDown(self):
         pass

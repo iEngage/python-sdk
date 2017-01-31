@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.content_disposition import ContentDisposition
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.content_disposition import ContentDisposition
 
 
 class TestContentDisposition(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestContentDisposition(unittest.TestCase):
         """
         Test ContentDisposition
         """
-        model = iengage-client.models.content_disposition.ContentDisposition()
+        model = iengage_client.models.content_disposition.ContentDisposition()
 
 
 if __name__ == '__main__':

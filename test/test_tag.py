@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.tag import Tag
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.tag import Tag
 
 
 class TestTag(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestTag(unittest.TestCase):
         """
         Test Tag
         """
-        model = iengage-client.models.tag.Tag()
+        model = iengage_client.models.tag.Tag()
 
 
 if __name__ == '__main__':

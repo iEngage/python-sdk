@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.user_detail import UserDetail
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.user_detail import UserDetail
 
 
 class TestUserDetail(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestUserDetail(unittest.TestCase):
         """
         Test UserDetail
         """
-        model = iengage-client.models.user_detail.UserDetail()
+        model = iengage_client.models.user_detail.UserDetail()
 
 
 if __name__ == '__main__':

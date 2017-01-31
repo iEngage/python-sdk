@@ -1,4 +1,4 @@
-# iengage-client.QuestionApi
+# iengage_client.QuestionApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -47,15 +47,15 @@ Allows the user to answer the question
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 answer = 'answer_example' # str | answer
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -108,15 +108,15 @@ Allows the user to share question without attachment. Returns the question objec
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 category_id = 789 # int | categoryId
 question_title = 'question_title_example' # str | Question Title
 question_description = 'question_description_example' # str | Describe question
@@ -169,22 +169,22 @@ Allows the user to share question with attachment. Returns the question object
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 body = 789 # int | categoryId
 body2 = 'body_example' # str | questionTitle
 body3 = 'body_example' # str | questionDescription
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-body4 = [iengage-client.Attachment()] # list[Attachment] |  (optional)
+body4 = [iengage_client.Attachment()] # list[Attachment] |  (optional)
 
 try: 
     # Share question with attachment
@@ -232,15 +232,15 @@ Creates a question category. Returns the created question category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 name = 'name_example' # str | Name
 description = 'description_example' # str | description
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -295,15 +295,15 @@ Allows the user to delete an answer. Returns the deleted answer
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 answer_id = 789 # int | answerId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -354,15 +354,15 @@ Allows the user to delete a question. Returns the deleted answer
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -413,15 +413,15 @@ Allows the user to delete the question category. Returns the deleted question ca
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -472,15 +472,15 @@ Allows the user to dislike the answer.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 answer_id = 789 # int | answerId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -533,15 +533,15 @@ Returns the list of answers by questionId
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -596,15 +596,15 @@ Returns the list of questions shared by friends
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_status = 'question_status_example' # str | Question status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -661,15 +661,15 @@ Returns the question by id
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -720,15 +720,15 @@ Returns the list of question categories
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -781,15 +781,15 @@ Returns the list of all questions visible to the user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_status = 'question_status_example' # str | Question status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -846,15 +846,15 @@ Returns the list of recommended questions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -907,15 +907,15 @@ Returns the list of recommended questions from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -970,15 +970,15 @@ Returns the list of recommended users from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1033,15 +1033,15 @@ Returns the list of questions shared by specific user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 user_id = 789 # int | userId
 question_status = 'question_status_example' # str | Question status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1100,15 +1100,15 @@ Returns the list of question categories subscribed by the user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1163,15 +1163,15 @@ Returns the list of questions subscribed by specific user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 user_id = 789 # int | userId
 question_status = 'question_status_example' # str | Question status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1230,15 +1230,15 @@ Allows the user to like the answer.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 answer_id = 789 # int | answerId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1291,15 +1291,15 @@ Marks the answer as accepted. This means the user is satisfied with the answer &
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 answer_id = 789 # int | answerId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1352,15 +1352,15 @@ Returns the list of matching questions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 search_text = 'search_text_example' # str | Search Text, keywords to search
 question_status = 'question_status_example' # str | Question status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1417,15 +1417,15 @@ Allows the user to subscribe a question
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1476,15 +1476,15 @@ Returns the subscribed question category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1535,15 +1535,15 @@ Unmarks the answer. This will remove the marked answer.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 answer_id = 789 # int | answerId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1596,15 +1596,15 @@ Allows the user to unsubscribe a question
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1655,15 +1655,15 @@ Returns the unsubscribed question category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1714,15 +1714,15 @@ Allows the user to update an answer. Returns the updated answer
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 answer_id = 789 # int | answerId
 answer = 'answer_example' # str | answer
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1775,15 +1775,15 @@ Allows the user to update question. Returns the updated question
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 question_id = 789 # int | questionId
 question_title = 'question_title_example' # str | Question Title
 question_description = 'question_description_example' # str | Describe Question
@@ -1838,15 +1838,15 @@ Allows the user to update the question category. Returns the updated question ca
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.QuestionApi()
+api_instance = iengage_client.QuestionApi()
 category_id = 789 # int | categoryId
 category_name = 'category_name_example' # str | Category Name
 category_description = 'category_description_example' # str | Describe category

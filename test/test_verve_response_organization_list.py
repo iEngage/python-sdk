@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_organization_list import VerveResponseOrganizationList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_organization_list import VerveResponseOrganizationList
 
 
 class TestVerveResponseOrganizationList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseOrganizationList(unittest.TestCase):
         """
         Test VerveResponseOrganizationList
         """
-        model = iengage-client.models.verve_response_organization_list.VerveResponseOrganizationList()
+        model = iengage_client.models.verve_response_organization_list.VerveResponseOrganizationList()
 
 
 if __name__ == '__main__':

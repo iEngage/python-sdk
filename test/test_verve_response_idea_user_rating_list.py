@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.verve_response_idea_user_rating_list import VerveResponseIdeaUserRatingList
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.verve_response_idea_user_rating_list import VerveResponseIdeaUserRatingList
 
 
 class TestVerveResponseIdeaUserRatingList(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestVerveResponseIdeaUserRatingList(unittest.TestCase):
         """
         Test VerveResponseIdeaUserRatingList
         """
-        model = iengage-client.models.verve_response_idea_user_rating_list.VerveResponseIdeaUserRatingList()
+        model = iengage_client.models.verve_response_idea_user_rating_list.VerveResponseIdeaUserRatingList()
 
 
 if __name__ == '__main__':

@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.attachment import Attachment
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.attachment import Attachment
 
 
 class TestAttachment(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestAttachment(unittest.TestCase):
         """
         Test Attachment
         """
-        model = iengage-client.models.attachment.Attachment()
+        model = iengage_client.models.attachment.Attachment()
 
 
 if __name__ == '__main__':

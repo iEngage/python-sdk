@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.wf_task import WFTask
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.wf_task import WFTask
 
 
 class TestWFTask(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestWFTask(unittest.TestCase):
         """
         Test WFTask
         """
-        model = iengage-client.models.wf_task.WFTask()
+        model = iengage_client.models.wf_task.WFTask()
 
 
 if __name__ == '__main__':

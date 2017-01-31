@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.input_stream import InputStream
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.input_stream import InputStream
 
 
 class TestInputStream(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestInputStream(unittest.TestCase):
         """
         Test InputStream
         """
-        model = iengage-client.models.input_stream.InputStream()
+        model = iengage_client.models.input_stream.InputStream()
 
 
 if __name__ == '__main__':

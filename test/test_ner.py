@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.ner import NER
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.ner import NER
 
 
 class TestNER(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestNER(unittest.TestCase):
         """
         Test NER
         """
-        model = iengage-client.models.ner.NER()
+        model = iengage_client.models.ner.NER()
 
 
 if __name__ == '__main__':

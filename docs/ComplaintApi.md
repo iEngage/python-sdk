@@ -1,4 +1,4 @@
-# iengage-client.ComplaintApi
+# iengage_client.ComplaintApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -47,15 +47,15 @@ Allows the user to share complaint. Returns complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 category_id = 789 # int | categoryId
 complaint_title = 'complaint_title_example' # str | Complaint Title
 complaint_description = 'complaint_description_example' # str | Describe complaint
@@ -108,22 +108,22 @@ Allows the user to share complaints. Returns the complaint object
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 body = 789 # int | categoryId
 body2 = 'body_example' # str | complaintTitle
 body3 = 'body_example' # str | complaintDescription
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-body4 = [iengage-client.Attachment()] # list[Attachment] |  (optional)
+body4 = [iengage_client.Attachment()] # list[Attachment] |  (optional)
 
 try: 
     # Share complaint with attachment
@@ -171,15 +171,15 @@ Allows the user to share a solution on complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 solution = 'solution_example' # str | solution
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -232,15 +232,15 @@ Allows the user to create complaint category. Returns the created complaint cate
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 name = 'name_example' # str | Name
 description = 'description_example' # str | description
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -295,15 +295,15 @@ Allows the user to delete complaint. Returns the deleted complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -354,15 +354,15 @@ Returns the deleted complaint category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -413,15 +413,15 @@ Allows the user to delete solution. Returns the deleted solution
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 solution_id = 789 # int | solutionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -472,15 +472,15 @@ Allows the user to dislike the solution. Returns the disliked solution
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 solution_id = 789 # int | solutionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -533,15 +533,15 @@ Returns the complaint by id
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -592,15 +592,15 @@ Returns the list of complaint category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -653,15 +653,15 @@ Returns the list of all complaints visible for user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_status = 'complaint_status_example' # str | Complaint status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -718,15 +718,15 @@ Returns the list of complaints shared by friends
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_status = 'complaint_status_example' # str | Complaint status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -783,15 +783,15 @@ Returns the list of recommended complaints
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -844,15 +844,15 @@ Returns the list of recommended complaints from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -907,15 +907,15 @@ Returns the list of recommended users from DB
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -970,15 +970,15 @@ Return the list of solutions
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1033,15 +1033,15 @@ Returns the list of complaints shared by the user himself
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 user_id = 789 # int | userId
 complaint_status = 'complaint_status_example' # str | Complaint status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1100,15 +1100,15 @@ Returns the list of complaint categories subscribed by user himself
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1163,15 +1163,15 @@ Returns the list of complaints subscribed by user himself
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 user_id = 789 # int | userId
 complaint_status = 'complaint_status_example' # str | Complaint status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1230,15 +1230,15 @@ Allows the user to like the solution. Returns the liked solution
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 solution_id = 789 # int | solutionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1291,15 +1291,15 @@ Allows the user to mark a solution. This means user is satisfied with the soluti
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 solution_id = 789 # int | solutionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1352,15 +1352,15 @@ Returns the list of matching complaints
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 search_text = 'search_text_example' # str | Enter text to be searched
 complaint_status = 'complaint_status_example' # str | Complaint status <br/> 1) ALL <br/> 2)  UNREPLIED <br/> 3)  REPLIED <br/> 4)  CLOSED
 start = 56 # int | start, initial value start from 0
@@ -1417,15 +1417,15 @@ Allows the user to subscribe a complaint. Returns the subscibed complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1476,15 +1476,15 @@ Allows the user to subscribe complaint category. Returns the subscribed complain
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1535,15 +1535,15 @@ Allows the user to unmark a solution. This will remove the marked solution.
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 solution_id = 789 # int | solutionId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1596,15 +1596,15 @@ Allows the user to unsubscribe complaint. Returns the unsubscribed complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1655,15 +1655,15 @@ Allows the user to unsubscribe complaint category. Returns the unsubscribed comp
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 category_id = 789 # int | categoryId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1714,15 +1714,15 @@ Allows the user to update complaint. Returns the updated complaint
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 complaint_id = 789 # int | complaintId
 complaint_title = 'complaint_title_example' # str | Complaint Title
 complaint_description = 'complaint_description_example' # str | Describe Complaint
@@ -1777,15 +1777,15 @@ Returns the updated complaint category
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 category_id = 789 # int | categoryId
 category_name = 'category_name_example' # str | Category Name
 category_description = 'category_description_example' # str | Describe category
@@ -1840,15 +1840,15 @@ Allows the user to update solution. Returns the updated solution
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.ComplaintApi()
+api_instance = iengage_client.ComplaintApi()
 solution_id = 789 # int | solutionId
 solution = 'solution_example' # str | solution
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user

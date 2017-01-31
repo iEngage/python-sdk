@@ -17,9 +17,9 @@ import os
 import sys
 import unittest
 
-import iengage-client
-from iengage-client.rest import ApiException
-from iengage-client.models.project_management import ProjectManagement
+import iengage_client
+from iengage_client.rest import ApiException
+from iengage_client.models.project_management import ProjectManagement
 
 
 class TestProjectManagement(unittest.TestCase):
@@ -35,7 +35,7 @@ class TestProjectManagement(unittest.TestCase):
         """
         Test ProjectManagement
         """
-        model = iengage-client.models.project_management.ProjectManagement()
+        model = iengage_client.models.project_management.ProjectManagement()
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-# iengage-client.IdeaApi
+# iengage_client.IdeaApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -41,15 +41,15 @@ Allows the user to delete comment. Returns the deleted comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 comment_id = 789 # int | Comment Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -98,15 +98,15 @@ Allows the user to delete idea. Returns the deleted idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | ideaId
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -157,15 +157,15 @@ Allows the user to follow idea. Returns the followed idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | idea Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -216,15 +216,15 @@ Returns the list of ideas
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -277,15 +277,15 @@ Returns the list of ideas being followed
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -340,15 +340,15 @@ Return the ideas list on group
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | user Id
 group_id = 789 # int | group Id
 start = 56 # int | start, initial value start from 0
@@ -405,15 +405,15 @@ Returns the idea by id
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | idea Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -464,15 +464,15 @@ Returns the list of comments on idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | idea Id
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -525,15 +525,15 @@ Returns the list of followers
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | ideaId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -586,15 +586,15 @@ Return the rating parameters of idea by user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | user Id
 idea_stage = 'idea_stage_example' # str | Idea stages<br/>1)under-consideration <br/>2) shortlisted <br/>3) accepted <br/>4) prototyping
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -645,15 +645,15 @@ Return the rated ideas list
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | user Id
 idea_id = 789 # int | idea Id
 idea_stage = 'idea_stage_example' # str | Idea stages<br/>1)under-consideration <br/>2) shortlisted <br/>3) accepted <br/>4) prototyping
@@ -706,15 +706,15 @@ Returns the list of recommended ideas
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -767,15 +767,15 @@ Return the list of top ideas
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -828,15 +828,15 @@ Returns the list of ideas shared by user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | userId whose ideas you need
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -891,15 +891,15 @@ Return the list of ideas rated by user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | userId whose ideas you need
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -954,15 +954,15 @@ Allows the user to rate an idea. Returns the rated idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | user Id
 idea_id = 789 # int | idea Id
 idea_stage = 'idea_stage_example' # str | Ideas stage<br/>1)under-consideration <br/>2) shortlisted <br/>3) accepted <br/>4) prototyping
@@ -1017,15 +1017,15 @@ Allows the user to give a rating on idea. Returns the rated idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 user_id = 789 # int | user Id
 idea_id = 789 # int | idea Id
 idea_stage = 'idea_stage_example' # str | Idea stages<br/>1)under-consideration <br/>2) shortlisted <br/>3) accepted <br/>4) prototyping
@@ -1084,15 +1084,15 @@ Returns the list of matching ideas
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 search_text = 'search_text_example' # str | Enter text to be searched
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
@@ -1147,19 +1147,19 @@ Allows the user to share idea with attachments
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 body = 'body_example' # str | title
 body2 = 'body_example' # str | description
 body3 = 789 # int | groupId
-body4 = [iengage-client.Attachment()] # list[Attachment] | attachments
+body4 = [iengage_client.Attachment()] # list[Attachment] | attachments
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
@@ -1210,15 +1210,15 @@ Allows the user to share idea. Returns the shared idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 title = 'title_example' # str | title
 description = 'description_example' # str | description
 group_id = 789 # int | group Id
@@ -1271,15 +1271,15 @@ Allows the user to comment on shared idea. Returns the comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | idea Id
 comment_text = 'comment_text_example' # str | comment text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1330,15 +1330,15 @@ Allows the user to unfollow idea. Returns the unfollowed idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | idea Id
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
@@ -1389,15 +1389,15 @@ Allows the user to update comment. Returns the updated comment
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 comment_id = 789 # int | commentId
 comment_text = 'comment_text_example' # str | Comment text
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -1448,15 +1448,15 @@ Allows the user to update idea. Returns the updated idea
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.IdeaApi()
+api_instance = iengage_client.IdeaApi()
 idea_id = 789 # int | ideaId
 idea_title = 'idea_title_example' # str | Idea Title
 idea_description = 'idea_description_example' # str | Describe Idea

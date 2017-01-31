@@ -1,4 +1,4 @@
-# iengage-client.UserAuthenticationApi
+# iengage_client.UserAuthenticationApi
 
 All URIs are relative to *https://api.iengage.io:8243/api/1.0*
 
@@ -24,15 +24,15 @@ Add device token to push notification from server
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 registered_id = 'registered_id_example' # str | Registered device token to be added
 type = 'type_example' # str | Type of device android, ios
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -83,15 +83,15 @@ Add/Register new user. Returns the user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 screen_name = 'screen_name_example' # str | unique ID of user
 email_id = 'email_id_example' # str | email ID
 password = 'password_example' # str | password
@@ -154,15 +154,15 @@ Authenticate with username & password
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 user_name = 'user_name_example' # str | User name
 password = 'password_example' # str | Password
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
@@ -209,15 +209,15 @@ Allows the user to change password. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 current_password = 'current_password_example' # str | Current password
 new_password = 'new_password_example' # str | New password
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
@@ -268,15 +268,15 @@ Allows the user to delete user. Returns the deleted user
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 user_id = 789 # int | userId
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 
@@ -321,15 +321,15 @@ Return the list of organizations
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
@@ -376,15 +376,15 @@ Logout rest api session. Returns true if successful
 ```python
 from __future__ import print_statement
 import time
-import iengage-client
-from iengage-client.rest import ApiException
+import iengage_client
+from iengage_client.rest import ApiException
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
-iengage-client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = iengage-client.UserAuthenticationApi()
+api_instance = iengage_client.UserAuthenticationApi()
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
