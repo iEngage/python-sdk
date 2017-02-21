@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **get_interaction**
-> VerveResponseNLCList get_interaction(text, logged_in_user_id, access_token, client_token)
+> VerveResponseFlowFinder get_interaction(text, logged_in_user_id, access_token, client_token)
 
 Get the type of interaction
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VerveResponseNLCList**](VerveResponseNLCList.md)
+[**VerveResponseFlowFinder**](VerveResponseFlowFinder.md)
 
 ### Authorization
 

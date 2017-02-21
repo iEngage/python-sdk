@@ -17,7 +17,6 @@ from __future__ import absolute_import
 from .answer import Answer
 from .attachment import Attachment
 from .blog import Blog
-from .bucket import Bucket
 from .command_info import CommandInfo
 from .comment import Comment
 from .complaint import Complaint
@@ -29,6 +28,7 @@ from .data_source import DataSource
 from .discussion import Discussion
 from .entity import Entity
 from .entity_sentiment import EntitySentiment
+from .flow_finder import FlowFinder
 from .group import Group
 from .idea import Idea
 from .idea_user_rating import IdeaUserRating
@@ -37,13 +37,12 @@ from .interaction import Interaction
 from .interaction_category import InteractionCategory
 from .interaction_response import InteractionResponse
 from .media_type import MediaType
+from .milestone import Milestone
 from .multimedia import Multimedia
 from .ner import NER
-from .nlc import NLC
 from .notification import Notification
 from .organization import Organization
 from .output_stream import OutputStream
-from .project_management import ProjectManagement
 from .question import Question
 from .question_category import QuestionCategory
 from .request_for_me import RequestForMe
@@ -68,6 +67,7 @@ from .verve_response_complaint_list import VerveResponseComplaintList
 from .verve_response_discussion import VerveResponseDiscussion
 from .verve_response_discussion_list import VerveResponseDiscussionList
 from .verve_response_entity_sentiment_list import VerveResponseEntitySentimentList
+from .verve_response_flow_finder import VerveResponseFlowFinder
 from .verve_response_group import VerveResponseGroup
 from .verve_response_group_list import VerveResponseGroupList
 from .verve_response_idea import VerveResponseIdea
@@ -81,7 +81,6 @@ from .verve_response_interaction_response import VerveResponseInteractionRespons
 from .verve_response_interaction_response_list import VerveResponseInteractionResponseList
 from .verve_response_milestone import VerveResponseMilestone
 from .verve_response_milestone_list import VerveResponseMilestoneList
-from .verve_response_nlc_list import VerveResponseNLCList
 from .verve_response_notification_list import VerveResponseNotificationList
 from .verve_response_organization_list import VerveResponseOrganizationList
 from .verve_response_question import VerveResponseQuestion

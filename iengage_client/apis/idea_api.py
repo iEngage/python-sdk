@@ -144,11 +144,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -276,11 +276,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -408,11 +408,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -2708,7 +2708,7 @@ class IdeaApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded', 'multipart/form-data'])
+            select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -2846,11 +2846,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -2981,11 +2981,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3113,11 +3113,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3248,11 +3248,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3394,11 +3394,11 @@ class IdeaApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **by_user** | [**User**](User.md) |  | [optional] 
 **entity** | [**Entity**](Entity.md) |  | [optional] 
 **parent_entity** | [**Entity**](Entity.md) |  | [optional] 
+**extra_data** | **str** |  | [optional] 
 **read** | **bool** |  | [optional] [default to False]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

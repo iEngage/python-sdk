@@ -156,11 +156,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -431,11 +431,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -455,7 +455,7 @@ class InteractionApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def create_interaction_category(self, interaction_type, name, description, logged_in_user_id, access_token, client_token, **kwargs):
+    def create_interaction_category(self, interaction_type, name, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Create interaction category
         Creates a interaction category. Returns the created interaction category
@@ -465,17 +465,17 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_interaction_category(interaction_type, name, description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.create_interaction_category(interaction_type, name, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str interaction_type: Interaction Type (required)
         :param str name: Name (required)
-        :param str description: description (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
         :param int organization_id: OrganizationId
+        :param str description: description
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType
         :return: VerveResponseInteractionCategory
                  If the method is called asynchronously,
@@ -483,12 +483,12 @@ class InteractionApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.create_interaction_category_with_http_info(interaction_type, name, description, logged_in_user_id, access_token, client_token, **kwargs)
+            return self.create_interaction_category_with_http_info(interaction_type, name, logged_in_user_id, access_token, client_token, **kwargs)
         else:
-            (data) = self.create_interaction_category_with_http_info(interaction_type, name, description, logged_in_user_id, access_token, client_token, **kwargs)
+            (data) = self.create_interaction_category_with_http_info(interaction_type, name, logged_in_user_id, access_token, client_token, **kwargs)
             return data
 
-    def create_interaction_category_with_http_info(self, interaction_type, name, description, logged_in_user_id, access_token, client_token, **kwargs):
+    def create_interaction_category_with_http_info(self, interaction_type, name, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Create interaction category
         Creates a interaction category. Returns the created interaction category
@@ -498,24 +498,24 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.create_interaction_category_with_http_info(interaction_type, name, description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.create_interaction_category_with_http_info(interaction_type, name, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str interaction_type: Interaction Type (required)
         :param str name: Name (required)
-        :param str description: description (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
         :param int organization_id: OrganizationId
+        :param str description: description
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType
         :return: VerveResponseInteractionCategory
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['interaction_type', 'name', 'description', 'logged_in_user_id', 'access_token', 'client_token', 'organization_id', 'fields']
+        all_params = ['interaction_type', 'name', 'logged_in_user_id', 'access_token', 'client_token', 'organization_id', 'description', 'fields']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -536,9 +536,6 @@ class InteractionApi(object):
         # verify the required parameter 'name' is set
         if ('name' not in params) or (params['name'] is None):
             raise ValueError("Missing the required parameter `name` when calling `create_interaction_category`")
-        # verify the required parameter 'description' is set
-        if ('description' not in params) or (params['description'] is None):
-            raise ValueError("Missing the required parameter `description` when calling `create_interaction_category`")
         # verify the required parameter 'logged_in_user_id' is set
         if ('logged_in_user_id' not in params) or (params['logged_in_user_id'] is None):
             raise ValueError("Missing the required parameter `logged_in_user_id` when calling `create_interaction_category`")
@@ -581,11 +578,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -713,11 +710,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -845,11 +842,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -977,11 +974,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -1116,11 +1113,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -1886,6 +1883,7 @@ class InteractionApi(object):
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str interaction_type: Interaction Type
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType
         :return: VerveResponseInteractionList
                  If the method is called asynchronously,
@@ -1918,13 +1916,14 @@ class InteractionApi(object):
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str interaction_type: Interaction Type
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType
         :return: VerveResponseInteractionList
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['user_id', 'start', 'end', 'logged_in_user_id', 'access_token', 'client_token', 'fields']
+        all_params = ['user_id', 'start', 'end', 'logged_in_user_id', 'access_token', 'client_token', 'interaction_type', 'fields']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1967,6 +1966,8 @@ class InteractionApi(object):
             path_params['userId'] = params['user_id']
 
         query_params = {}
+        if 'interaction_type' in params:
+            query_params['interactionType'] = params['interaction_type']
         if 'start' in params:
             query_params['start'] = params['start']
         if 'end' in params:
@@ -2894,11 +2895,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3033,11 +3034,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3322,11 +3323,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3454,11 +3455,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3593,11 +3594,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3725,11 +3726,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3857,11 +3858,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -3881,7 +3882,7 @@ class InteractionApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_interaction(self, interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, **kwargs):
+    def update_interaction(self, interaction_id, interaction_title, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Update interaction
         Allows the user to update interaction. Returns the updated interaction
@@ -3891,16 +3892,16 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_interaction(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.update_interaction(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int interaction_id: interactionId (required)
         :param str interaction_title: Interaction Title (required)
-        :param str interaction_description: Describe Interaction (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str interaction_description: Describe Interaction
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType
         :return: VerveResponseInteraction
                  If the method is called asynchronously,
@@ -3908,12 +3909,12 @@ class InteractionApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_interaction_with_http_info(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, **kwargs)
+            return self.update_interaction_with_http_info(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, **kwargs)
         else:
-            (data) = self.update_interaction_with_http_info(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, **kwargs)
+            (data) = self.update_interaction_with_http_info(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, **kwargs)
             return data
 
-    def update_interaction_with_http_info(self, interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, **kwargs):
+    def update_interaction_with_http_info(self, interaction_id, interaction_title, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Update interaction
         Allows the user to update interaction. Returns the updated interaction
@@ -3923,23 +3924,23 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_interaction_with_http_info(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.update_interaction_with_http_info(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int interaction_id: interactionId (required)
         :param str interaction_title: Interaction Title (required)
-        :param str interaction_description: Describe Interaction (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str interaction_description: Describe Interaction
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType
         :return: VerveResponseInteraction
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['interaction_id', 'interaction_title', 'interaction_description', 'logged_in_user_id', 'access_token', 'client_token', 'fields']
+        all_params = ['interaction_id', 'interaction_title', 'logged_in_user_id', 'access_token', 'client_token', 'interaction_description', 'fields']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3960,9 +3961,6 @@ class InteractionApi(object):
         # verify the required parameter 'interaction_title' is set
         if ('interaction_title' not in params) or (params['interaction_title'] is None):
             raise ValueError("Missing the required parameter `interaction_title` when calling `update_interaction`")
-        # verify the required parameter 'interaction_description' is set
-        if ('interaction_description' not in params) or (params['interaction_description'] is None):
-            raise ValueError("Missing the required parameter `interaction_description` when calling `update_interaction`")
         # verify the required parameter 'logged_in_user_id' is set
         if ('logged_in_user_id' not in params) or (params['logged_in_user_id'] is None):
             raise ValueError("Missing the required parameter `logged_in_user_id` when calling `update_interaction`")
@@ -4003,11 +4001,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -4027,7 +4025,7 @@ class InteractionApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def update_interaction_category(self, category_id, category_name, category_description, logged_in_user_id, access_token, client_token, **kwargs):
+    def update_interaction_category(self, category_id, category_name, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Update interaction category
         Allows the user to update the interaction category. Returns the updated interaction category
@@ -4037,16 +4035,16 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_interaction_category(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.update_interaction_category(category_id, category_name, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int category_id: categoryId (required)
         :param str category_name: Category Name (required)
-        :param str category_description: Describe category (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str category_description: Describe category
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType
         :return: VerveResponseInteractionCategory
                  If the method is called asynchronously,
@@ -4054,12 +4052,12 @@ class InteractionApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.update_interaction_category_with_http_info(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, **kwargs)
+            return self.update_interaction_category_with_http_info(category_id, category_name, logged_in_user_id, access_token, client_token, **kwargs)
         else:
-            (data) = self.update_interaction_category_with_http_info(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, **kwargs)
+            (data) = self.update_interaction_category_with_http_info(category_id, category_name, logged_in_user_id, access_token, client_token, **kwargs)
             return data
 
-    def update_interaction_category_with_http_info(self, category_id, category_name, category_description, logged_in_user_id, access_token, client_token, **kwargs):
+    def update_interaction_category_with_http_info(self, category_id, category_name, logged_in_user_id, access_token, client_token, **kwargs):
         """
         Update interaction category
         Allows the user to update the interaction category. Returns the updated interaction category
@@ -4069,23 +4067,23 @@ class InteractionApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.update_interaction_category_with_http_info(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, callback=callback_function)
+        >>> thread = api.update_interaction_category_with_http_info(category_id, category_name, logged_in_user_id, access_token, client_token, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int category_id: categoryId (required)
         :param str category_name: Category Name (required)
-        :param str category_description: Describe category (required)
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
+        :param str category_description: Describe category
         :param str fields: Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType
         :return: VerveResponseInteractionCategory
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['category_id', 'category_name', 'category_description', 'logged_in_user_id', 'access_token', 'client_token', 'fields']
+        all_params = ['category_id', 'category_name', 'logged_in_user_id', 'access_token', 'client_token', 'category_description', 'fields']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4106,9 +4104,6 @@ class InteractionApi(object):
         # verify the required parameter 'category_name' is set
         if ('category_name' not in params) or (params['category_name'] is None):
             raise ValueError("Missing the required parameter `category_name` when calling `update_interaction_category`")
-        # verify the required parameter 'category_description' is set
-        if ('category_description' not in params) or (params['category_description'] is None):
-            raise ValueError("Missing the required parameter `category_description` when calling `update_interaction_category`")
         # verify the required parameter 'logged_in_user_id' is set
         if ('logged_in_user_id' not in params) or (params['logged_in_user_id'] is None):
             raise ValueError("Missing the required parameter `logged_in_user_id` when calling `update_interaction_category`")
@@ -4149,11 +4144,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']
@@ -4288,11 +4283,11 @@ class InteractionApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['application/json', 'application/xml'])
+            select_header_accept(['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'application/x-www-form-urlencoded'])
+            select_header_content_type(['application/x-www-form-urlencoded'])
 
         # Authentication setting
         auth_settings = ['default']

@@ -58,7 +58,7 @@ class AugmentedIntelligenceApi(object):
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
-        :return: VerveResponseNLCList
+        :return: VerveResponseFlowFinder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -87,7 +87,7 @@ class AugmentedIntelligenceApi(object):
         :param str logged_in_user_id: User id of logged / authenticated user (required)
         :param str access_token: Unique session token for user. To get access token user will have to authenticate (required)
         :param str client_token: Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs (required)
-        :return: VerveResponseNLCList
+        :return: VerveResponseFlowFinder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -160,7 +160,7 @@ class AugmentedIntelligenceApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='VerveResponseNLCList',
+                                        response_type='VerveResponseFlowFinder',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

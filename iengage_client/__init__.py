@@ -17,7 +17,6 @@ from __future__ import absolute_import
 from .models.answer import Answer
 from .models.attachment import Attachment
 from .models.blog import Blog
-from .models.bucket import Bucket
 from .models.command_info import CommandInfo
 from .models.comment import Comment
 from .models.complaint import Complaint
@@ -29,6 +28,7 @@ from .models.data_source import DataSource
 from .models.discussion import Discussion
 from .models.entity import Entity
 from .models.entity_sentiment import EntitySentiment
+from .models.flow_finder import FlowFinder
 from .models.group import Group
 from .models.idea import Idea
 from .models.idea_user_rating import IdeaUserRating
@@ -37,13 +37,12 @@ from .models.interaction import Interaction
 from .models.interaction_category import InteractionCategory
 from .models.interaction_response import InteractionResponse
 from .models.media_type import MediaType
+from .models.milestone import Milestone
 from .models.multimedia import Multimedia
 from .models.ner import NER
-from .models.nlc import NLC
 from .models.notification import Notification
 from .models.organization import Organization
 from .models.output_stream import OutputStream
-from .models.project_management import ProjectManagement
 from .models.question import Question
 from .models.question_category import QuestionCategory
 from .models.request_for_me import RequestForMe
@@ -68,6 +67,7 @@ from .models.verve_response_complaint_list import VerveResponseComplaintList
 from .models.verve_response_discussion import VerveResponseDiscussion
 from .models.verve_response_discussion_list import VerveResponseDiscussionList
 from .models.verve_response_entity_sentiment_list import VerveResponseEntitySentimentList
+from .models.verve_response_flow_finder import VerveResponseFlowFinder
 from .models.verve_response_group import VerveResponseGroup
 from .models.verve_response_group_list import VerveResponseGroupList
 from .models.verve_response_idea import VerveResponseIdea
@@ -81,7 +81,6 @@ from .models.verve_response_interaction_response import VerveResponseInteraction
 from .models.verve_response_interaction_response_list import VerveResponseInteractionResponseList
 from .models.verve_response_milestone import VerveResponseMilestone
 from .models.verve_response_milestone_list import VerveResponseMilestoneList
-from .models.verve_response_nlc_list import VerveResponseNLCList
 from .models.verve_response_notification_list import VerveResponseNotificationList
 from .models.verve_response_organization_list import VerveResponseOrganizationList
 from .models.verve_response_question import VerveResponseQuestion

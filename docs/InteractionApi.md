@@ -94,8 +94,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -220,13 +220,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_interaction_category**
-> VerveResponseInteractionCategory create_interaction_category(interaction_type, name, description, logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+> VerveResponseInteractionCategory create_interaction_category(interaction_type, name, logged_in_user_id, access_token, client_token, organization_id=organization_id, description=description, fields=fields)
 
 Create interaction category
 
@@ -247,16 +247,16 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.InteractionApi()
 interaction_type = 'interaction_type_example' # str | Interaction Type
 name = 'name_example' # str | Name
-description = 'description_example' # str | description
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 organization_id = 789 # int | OrganizationId (optional)
+description = 'description_example' # str | description (optional)
 fields = 'categoryId,categoryName,interactionType' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType (optional) (default to categoryId,categoryName,interactionType)
 
 try: 
     # Create interaction category
-    api_response = api_instance.create_interaction_category(interaction_type, name, description, logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+    api_response = api_instance.create_interaction_category(interaction_type, name, logged_in_user_id, access_token, client_token, organization_id=organization_id, description=description, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InteractionApi->create_interaction_category: %s\n" % e)
@@ -268,11 +268,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **interaction_type** | **str**| Interaction Type | 
  **name** | **str**| Name | 
- **description** | **str**| description | 
  **logged_in_user_id** | **str**| User id of logged / authenticated user | 
  **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **organization_id** | **int**| OrganizationId | [optional] 
+ **description** | **str**| description | [optional] 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)categoryId&lt;br/&gt;2)categoryName&lt;br/&gt;3)interactionType&lt;br/&gt;&lt;b&gt;A) Available values -&lt;/b&gt; &lt;br/&gt;1)categoryId&lt;br/&gt;2)categoryName&lt;br/&gt;3)categoryDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)isSubscribed&lt;br/&gt;6)interactionType | [optional] [default to categoryId,categoryName,interactionType]
 
 ### Return type
@@ -285,8 +285,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -344,8 +344,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -403,8 +403,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -462,8 +462,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -523,8 +523,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -848,7 +848,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_recommended_interactins_from_db**
-> VerveResponseInteractionList get_recommended_interactins_from_db(user_id, start, end, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseInteractionList get_recommended_interactins_from_db(user_id, start, end, logged_in_user_id, access_token, client_token, interaction_type=interaction_type, fields=fields)
 
 Get list of recommended interactions from DB
 
@@ -873,11 +873,12 @@ end = 56 # int | end
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+interaction_type = 'interaction_type_example' # str | Interaction Type (optional)
 fields = 'interactionId,interactionTitle,interactionDescription,createdDate,,interactionType' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType (optional) (default to interactionId,interactionTitle,interactionDescription,createdDate,,interactionType)
 
 try: 
     # Get list of recommended interactions from DB
-    api_response = api_instance.get_recommended_interactins_from_db(user_id, start, end, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_recommended_interactins_from_db(user_id, start, end, logged_in_user_id, access_token, client_token, interaction_type=interaction_type, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InteractionApi->get_recommended_interactins_from_db: %s\n" % e)
@@ -893,6 +894,7 @@ Name | Type | Description  | Notes
  **logged_in_user_id** | **str**| User id of logged / authenticated user | 
  **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **interaction_type** | **str**| Interaction Type | [optional] 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)interactionId&lt;br/&gt;2)interactionTitle&lt;br/&gt;3)interactionDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)interactionType&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)interactionId&lt;br/&gt;2)interactionTitle&lt;br/&gt;3)interactionDescription&lt;br/&gt;4)issuer&lt;br/&gt;5)noOfResponses&lt;br/&gt;6)isClosed&lt;br/&gt;7)createdDate&lt;br/&gt;8)lastUpdatedDate&lt;br/&gt;9)videoId&lt;br/&gt;10)fileURL&lt;br/&gt;11)isSubscribed&lt;br/&gt;12)sentiment&lt;/br&gt;13)entity&lt;br/&gt;14)interactionType | [optional] [default to interactionId,interactionTitle,interactionDescription,createdDate,,interactionType]
 
 ### Return type
@@ -1295,8 +1297,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1356,8 +1358,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1482,8 +1484,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1541,8 +1543,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1602,8 +1604,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1661,8 +1663,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1720,13 +1722,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/x-www-form-urlencoded
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_interaction**
-> VerveResponseInteraction update_interaction(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseInteraction update_interaction(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, interaction_description=interaction_description, fields=fields)
 
 Update interaction
 
@@ -1747,15 +1749,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.InteractionApi()
 interaction_id = 789 # int | interactionId
 interaction_title = 'interaction_title_example' # str | Interaction Title
-interaction_description = 'interaction_description_example' # str | Describe Interaction
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+interaction_description = 'interaction_description_example' # str | Describe Interaction (optional)
 fields = 'interactionId,interactionTitle,interactionDescription,createdDate,interactionType' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)createdDate<br/>5)interactionType<br/><b>A) Available values-</b><br/>1)interactionId<br/>2)interactionTitle<br/>3)interactionDescription<br/>4)issuer<br/>5)noOfResponses<br/>6)isClosed<br/>7)createdDate<br/>8)lastUpdatedDate<br/>9)videoId<br/>10)fileURL<br/>11)isSubscribed<br/>12)sentiment</br>13)entity<br/>14)interactionType (optional) (default to interactionId,interactionTitle,interactionDescription,createdDate,interactionType)
 
 try: 
     # Update interaction
-    api_response = api_instance.update_interaction(interaction_id, interaction_title, interaction_description, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.update_interaction(interaction_id, interaction_title, logged_in_user_id, access_token, client_token, interaction_description=interaction_description, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InteractionApi->update_interaction: %s\n" % e)
@@ -1767,10 +1769,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **interaction_id** | **int**| interactionId | 
  **interaction_title** | **str**| Interaction Title | 
- **interaction_description** | **str**| Describe Interaction | 
  **logged_in_user_id** | **str**| User id of logged / authenticated user | 
  **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **interaction_description** | **str**| Describe Interaction | [optional] 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)interactionId&lt;br/&gt;2)interactionTitle&lt;br/&gt;3)interactionDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)interactionType&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)interactionId&lt;br/&gt;2)interactionTitle&lt;br/&gt;3)interactionDescription&lt;br/&gt;4)issuer&lt;br/&gt;5)noOfResponses&lt;br/&gt;6)isClosed&lt;br/&gt;7)createdDate&lt;br/&gt;8)lastUpdatedDate&lt;br/&gt;9)videoId&lt;br/&gt;10)fileURL&lt;br/&gt;11)isSubscribed&lt;br/&gt;12)sentiment&lt;/br&gt;13)entity&lt;br/&gt;14)interactionType | [optional] [default to interactionId,interactionTitle,interactionDescription,createdDate,interactionType]
 
 ### Return type
@@ -1783,13 +1785,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_interaction_category**
-> VerveResponseInteractionCategory update_interaction_category(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseInteractionCategory update_interaction_category(category_id, category_name, logged_in_user_id, access_token, client_token, category_description=category_description, fields=fields)
 
 Update interaction category
 
@@ -1810,15 +1812,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.InteractionApi()
 category_id = 789 # int | categoryId
 category_name = 'category_name_example' # str | Category Name
-category_description = 'category_description_example' # str | Describe category
 logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+category_description = 'category_description_example' # str | Describe category (optional)
 fields = 'categoryId,categoryName,interactionType' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)interactionType<br/><b>A) Available values -</b> <br/>1)categoryId<br/>2)categoryName<br/>3)categoryDescription<br/>4)createdDate<br/>5)isSubscribed<br/>6)interactionType (optional) (default to categoryId,categoryName,interactionType)
 
 try: 
     # Update interaction category
-    api_response = api_instance.update_interaction_category(category_id, category_name, category_description, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.update_interaction_category(category_id, category_name, logged_in_user_id, access_token, client_token, category_description=category_description, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InteractionApi->update_interaction_category: %s\n" % e)
@@ -1830,10 +1832,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **category_id** | **int**| categoryId | 
  **category_name** | **str**| Category Name | 
- **category_description** | **str**| Describe category | 
  **logged_in_user_id** | **str**| User id of logged / authenticated user | 
  **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **category_description** | **str**| Describe category | [optional] 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)categoryId&lt;br/&gt;2)categoryName&lt;br/&gt;3)interactionType&lt;br/&gt;&lt;b&gt;A) Available values -&lt;/b&gt; &lt;br/&gt;1)categoryId&lt;br/&gt;2)categoryName&lt;br/&gt;3)categoryDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)isSubscribed&lt;br/&gt;6)interactionType | [optional] [default to categoryId,categoryName,interactionType]
 
 ### Return type
@@ -1846,8 +1848,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1907,8 +1909,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
