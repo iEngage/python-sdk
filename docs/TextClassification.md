@@ -1,10 +1,10 @@
-# Tag
+# TextClassification
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag_name** | **str** |  | [optional] 
-**count** | **int** |  | [optional] 
+**confidence** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

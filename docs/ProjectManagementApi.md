@@ -1,6 +1,6 @@
 # iengage_client.ProjectManagementApi
 
-All URIs are relative to *https://api.iengage.io:8243/api/1.0*
+All URIs are relative to *https://api.iengage.io:8243/api/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,11 +20,11 @@ Method | HTTP request | Description
 
 
 # **add_milestone_comment**
-> VerveResponseComment add_milestone_comment(milestone_id, comment_text, logged_in_user_id, access_token, client_token)
+> VerveResponseComment add_milestone_comment(milestone_id, requester_id, client_token, body=body, access_token=access_token)
 
 Comment on milestone
 
-Allows the user to comment on milestone. Returns the comments
+This service allows a user to comment on a milestone. The following fields(key:value) are required to be present in the Comment JSON object. Refer to the Model & Model Schema of the expected JSON Object for the body of this API.</br><b>Required fields </br>1. milestoneId (Path Parameter)</br>2. commentText </br>
 
 ### Example 
 ```python
@@ -40,14 +40,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
-comment_text = 'comment_text_example' # str | commentText
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+body = iengage_client.Comment() # Comment |  (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Comment on milestone
-    api_response = api_instance.add_milestone_comment(milestone_id, comment_text, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.add_milestone_comment(milestone_id, requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->add_milestone_comment: %s\n" % e)
@@ -58,10 +58,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **milestone_id** | **int**| milestoneId | 
- **comment_text** | **str**| commentText | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **body** | [**Comment**](Comment.md)|  | [optional] 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -73,17 +73,17 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_task_comment**
-> VerveResponseComment add_task_comment(task_id, comment_text, logged_in_user_id, access_token, client_token)
+> VerveResponseComment add_task_comment(task_id, requester_id, client_token, body=body, access_token=access_token)
 
 Comment on task
 
-Allows  the user to comment on task. Returns the task comment
+This service allows a user to comment on a task. The following fields(key:value) are required to be present in the Comment JSON object. Refer to the Model & Model Schema of the expected JSON Object for the body of this API.</br><b>Required fields </br>1. taskId (Path Parameter)</br>2. commentText </br>
 
 ### Example 
 ```python
@@ -99,14 +99,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
-comment_text = 'comment_text_example' # str | commentText
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+body = iengage_client.Comment() # Comment |  (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Comment on task
-    api_response = api_instance.add_task_comment(task_id, comment_text, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.add_task_comment(task_id, requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->add_task_comment: %s\n" % e)
@@ -117,10 +117,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **int**| taskId | 
- **comment_text** | **str**| commentText | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **body** | [**Comment**](Comment.md)|  | [optional] 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -132,17 +132,17 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_milestone**
-> VerveResponseMilestone create_milestone(title, description, due_date, never_due, logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+> VerveResponseMilestone create_milestone(requester_id, client_token, body=body, access_token=access_token)
 
 Create milestone
 
-Allows the user to create milestone. Returns the created milestone
+This service allows a user to create a milestone. The following fields(key:value) are required to be present in the Milestone JSON object. Refer to the Model & Model Schema of the expected JSON Object for the body of this API.</br><b>Required fields </br>1. milestoneTitle </br>2. milestoneDescription </br>3. dueDate </br>4. neverDue </br>
 
 ### Example 
 ```python
@@ -157,19 +157,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
-title = 'title_example' # str | title
-description = 'description_example' # str | description
-due_date = 'due_date_example' # str | Due date(Format: MM-dd-yyyy HH:mm:ss a)
-never_due = true # bool | neverDue. If neverDue is true, it takes higher priority than dueDate
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-organization_id = 789 # int | organizationId (optional)
-fields = 'milestoneId,milestoneTitle,milestoneDescription,createdDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/><b>A) Available values-</b><br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/>5)status<br/>6)priority<br/>7)dueDate (optional) (default to milestoneId,milestoneTitle,milestoneDescription,createdDate)
+body = iengage_client.Milestone() # Milestone |  (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Create milestone
-    api_response = api_instance.create_milestone(title, description, due_date, never_due, logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+    api_response = api_instance.create_milestone(requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->create_milestone: %s\n" % e)
@@ -179,15 +174,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **title** | **str**| title | 
- **description** | **str**| description | 
- **due_date** | **str**| Due date(Format: MM-dd-yyyy HH:mm:ss a) | 
- **never_due** | **bool**| neverDue. If neverDue is true, it takes higher priority than dueDate | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **organization_id** | **int**| organizationId | [optional] 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)status&lt;br/&gt;6)priority&lt;br/&gt;7)dueDate | [optional] [default to milestoneId,milestoneTitle,milestoneDescription,createdDate]
+ **body** | [**Milestone**](Milestone.md)|  | [optional] 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -199,17 +189,17 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_task**
-> VerveResponseTask create_task(title, description, priority, assignee_user_id, due_date, never_due, milestone_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseTask create_task(milestone_id, requester_id, client_token, body=body, access_token=access_token)
 
 Create task
 
-Allows user to create task. Returns the created task
+This service allows a user to create a task. The following fields(key:value) are required to be present in the Task JSON object. Refer to the Model & Model Schema of the expected JSON Object for the body of this API.</br> <b>Required fields </br>1. taskTitle </br>2. taskDescription </br>3. priority </br>4. dueDate </br>5. assigneeUserId </br>6. neverDue </br>7. user: { userId }</b>
 
 ### Example 
 ```python
@@ -224,21 +214,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
-title = 'title_example' # str | title
-description = 'description_example' # str | description
-priority = 56 # int | Task priority <br/> 1 - HIGH <br/> 2 - LOW <br/> 3 - NORMAL
-assignee_user_id = 789 # int | assignee User Id
-due_date = 'due_date_example' # str | Due date (Format: MM-dd-yyyy HH:mm:ss a)
-never_due = true # bool | neverDue. If neverDue is true, it takes higher priority than dueDate
 milestone_id = 789 # int | Milestone Id
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-fields = 'taskId,taskTitle,taskDescription,dueDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)dueDate<br/><b>A) Available values-</b><br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)status<br/>5)priority<br/>6)dueDate<br/>7)milestoneName<br/>8)groupType<br/>9)groupName (optional) (default to taskId,taskTitle,taskDescription,dueDate)
+body = iengage_client.Task() # Task |  (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Create task
-    api_response = api_instance.create_task(title, description, priority, assignee_user_id, due_date, never_due, milestone_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.create_task(milestone_id, requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->create_task: %s\n" % e)
@@ -248,17 +232,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **title** | **str**| title | 
- **description** | **str**| description | 
- **priority** | **int**| Task priority &lt;br/&gt; 1 - HIGH &lt;br/&gt; 2 - LOW &lt;br/&gt; 3 - NORMAL | 
- **assignee_user_id** | **int**| assignee User Id | 
- **due_date** | **str**| Due date (Format: MM-dd-yyyy HH:mm:ss a) | 
- **never_due** | **bool**| neverDue. If neverDue is true, it takes higher priority than dueDate | 
  **milestone_id** | **int**| Milestone Id | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)dueDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)status&lt;br/&gt;5)priority&lt;br/&gt;6)dueDate&lt;br/&gt;7)milestoneName&lt;br/&gt;8)groupType&lt;br/&gt;9)groupName | [optional] [default to taskId,taskTitle,taskDescription,dueDate]
+ **body** | [**Task**](Task.md)|  | [optional] 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -270,13 +248,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_milestone**
-> VerveResponseMilestone delete_milestone(milestone_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseMilestone delete_milestone(milestone_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Delete milestone
 
@@ -296,14 +274,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'milestoneId,milestoneTitle,milestoneDescription,createdDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/><b>A) Available values-</b><br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/>5)status<br/>6)priority<br/>7)dueDate (optional) (default to milestoneId,milestoneTitle,milestoneDescription,createdDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Delete milestone
-    api_response = api_instance.delete_milestone(milestone_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.delete_milestone(milestone_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->delete_milestone: %s\n" % e)
@@ -314,10 +292,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **milestone_id** | **int**| milestoneId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)status&lt;br/&gt;6)priority&lt;br/&gt;7)dueDate | [optional] [default to milestoneId,milestoneTitle,milestoneDescription,createdDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -335,7 +313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_task**
-> VerveResponseTask delete_task(task_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseTask delete_task(task_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Delete task
 
@@ -355,14 +333,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'taskId,taskTitle,taskDescription,dueDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)dueDate<br/><b>A) Available values-</b><br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)status<br/>5)priority<br/>6)dueDate<br/>7)milestoneName<br/>8)groupType<br/>9)groupName (optional) (default to taskId,taskTitle,taskDescription,dueDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Delete task
-    api_response = api_instance.delete_task(task_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.delete_task(task_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->delete_task: %s\n" % e)
@@ -373,10 +351,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **int**| taskId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)dueDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)status&lt;br/&gt;5)priority&lt;br/&gt;6)dueDate&lt;br/&gt;7)milestoneName&lt;br/&gt;8)groupType&lt;br/&gt;9)groupName | [optional] [default to taskId,taskTitle,taskDescription,dueDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -394,7 +372,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_milestones**
-> VerveResponseMilestoneList get_milestones(logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+> VerveResponseMilestoneList get_milestones(requester_id, client_token, organization_id=organization_id, fields=fields, access_token=access_token)
 
 Get list of milestones
 
@@ -413,15 +391,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 organization_id = 789 # int | organizationId (optional)
 fields = 'milestoneId,milestoneTitle,milestoneDescription,createdDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/><b>A) Available values-</b><br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/>5)status<br/>6)priority<br/>7)dueDate (optional) (default to milestoneId,milestoneTitle,milestoneDescription,createdDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of milestones
-    api_response = api_instance.get_milestones(logged_in_user_id, access_token, client_token, organization_id=organization_id, fields=fields)
+    api_response = api_instance.get_milestones(requester_id, client_token, organization_id=organization_id, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->get_milestones: %s\n" % e)
@@ -431,11 +409,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **organization_id** | **int**| organizationId | [optional] 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)status&lt;br/&gt;6)priority&lt;br/&gt;7)dueDate | [optional] [default to milestoneId,milestoneTitle,milestoneDescription,createdDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -453,7 +431,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_milestones_comments**
-> VerveResponseCommentList get_milestones_comments(milestone_id, logged_in_user_id, access_token, client_token)
+> VerveResponseCommentList get_milestones_comments(milestone_id, requester_id, client_token, access_token=access_token)
 
 Get list of comments written on Milestones
 
@@ -473,13 +451,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 milestone_id = 789 # int | milestoneId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of comments written on Milestones
-    api_response = api_instance.get_milestones_comments(milestone_id, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_milestones_comments(milestone_id, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->get_milestones_comments: %s\n" % e)
@@ -490,9 +468,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **milestone_id** | **int**| milestoneId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -510,7 +488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_task_comments**
-> VerveResponseCommentList get_task_comments(task_id, logged_in_user_id, access_token, client_token)
+> VerveResponseCommentList get_task_comments(task_id, requester_id, client_token, access_token=access_token)
 
 Get list of Comments written on task
 
@@ -530,13 +508,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of Comments written on task
-    api_response = api_instance.get_task_comments(task_id, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_task_comments(task_id, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->get_task_comments: %s\n" % e)
@@ -547,9 +525,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **int**| taskId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -567,7 +545,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_tasks**
-> VerveResponseTaskList get_user_tasks(user_id, status, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseTaskList get_user_tasks(user_id, status, requester_id, client_token, fields=fields, access_token=access_token)
 
 Get list of task assigned to user
 
@@ -586,16 +564,16 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.ProjectManagementApi()
-user_id = 789 # int | userId
+user_id = 789 # int | User Id whose assinged task want to get
 status = 56 # int | Task status <br/> 0 - ALL <br/> 1 - OPEN <br/> 2 - PERCENT_TWENTY <br/> 3 - PERCENT_FORTY <br/> 4 - PERCENT_SIXTY <br/> 5 - PERCENT_EIGHTY <br/> 6 - RESOLVED <br/> 7 - REOPENED
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'taskId,taskTitle,taskDescription,dueDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)dueDate<br/><b>A) Available values-</b><br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)status<br/>5)priority<br/>6)dueDate<br/>7)milestoneName<br/>8)groupType<br/>9)groupName (optional) (default to taskId,taskTitle,taskDescription,dueDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of task assigned to user
-    api_response = api_instance.get_user_tasks(user_id, status, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_user_tasks(user_id, status, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->get_user_tasks: %s\n" % e)
@@ -605,12 +583,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **int**| userId | 
+ **user_id** | **int**| User Id whose assinged task want to get | 
  **status** | **int**| Task status &lt;br/&gt; 0 - ALL &lt;br/&gt; 1 - OPEN &lt;br/&gt; 2 - PERCENT_TWENTY &lt;br/&gt; 3 - PERCENT_FORTY &lt;br/&gt; 4 - PERCENT_SIXTY &lt;br/&gt; 5 - PERCENT_EIGHTY &lt;br/&gt; 6 - RESOLVED &lt;br/&gt; 7 - REOPENED | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)dueDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)status&lt;br/&gt;5)priority&lt;br/&gt;6)dueDate&lt;br/&gt;7)milestoneName&lt;br/&gt;8)groupType&lt;br/&gt;9)groupName | [optional] [default to taskId,taskTitle,taskDescription,dueDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -628,7 +606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_milestone**
-> VerveResponseMilestone update_milestone(milestone_id, title, description, due_date, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseMilestone update_milestone(milestone_id, title, description, due_date, requester_id, client_token, fields=fields, access_token=access_token)
 
 Update milestone
 
@@ -651,14 +629,14 @@ milestone_id = 789 # int | milestoneId
 title = 'title_example' # str | title
 description = 'description_example' # str | description
 due_date = 'due_date_example' # str | Due date (Format: MM-dd-yyyy HH:mm:ss a)
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'milestoneId,milestoneTitle,milestoneDescription,createdDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/><b>A) Available values-</b><br/>1)milestoneId<br/>2)milestoneTitle<br/>3)milestoneDescription<br/>4)createdDate<br/>5)status<br/>6)priority<br/>7)dueDate (optional) (default to milestoneId,milestoneTitle,milestoneDescription,createdDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Update milestone
-    api_response = api_instance.update_milestone(milestone_id, title, description, due_date, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.update_milestone(milestone_id, title, description, due_date, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->update_milestone: %s\n" % e)
@@ -672,10 +650,10 @@ Name | Type | Description  | Notes
  **title** | **str**| title | 
  **description** | **str**| description | 
  **due_date** | **str**| Due date (Format: MM-dd-yyyy HH:mm:ss a) | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)milestoneId&lt;br/&gt;2)milestoneTitle&lt;br/&gt;3)milestoneDescription&lt;br/&gt;4)createdDate&lt;br/&gt;5)status&lt;br/&gt;6)priority&lt;br/&gt;7)dueDate | [optional] [default to milestoneId,milestoneTitle,milestoneDescription,createdDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -693,7 +671,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_task**
-> VerveResponseTask update_task(task_id, title, description, due_date, status, re_assignee_user_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseTask update_task(task_id, title, description, due_date, status, re_assignee_user_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Update task
 
@@ -718,14 +696,14 @@ description = 'description_example' # str | description
 due_date = 'due_date_example' # str | Due date
 status = 56 # int | Task status <br/> 1 - OPEN <br/> 2 - PERCENT_TWENTY <br/> 3 - PERCENT_FORTY <br/> 4 - PERCENT_SIXTY <br/> 5 - PERCENT_EIGHTY <br/> 6 - RESOLVED <br/> 7 - REOPENED
 re_assignee_user_id = 789 # int | re-assignee User Id
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'taskId,taskTitle,taskDescription,dueDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)dueDate<br/><b>A) Available values-</b><br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)status<br/>5)priority<br/>6)dueDate<br/>7)milestoneName<br/>8)groupType<br/>9)groupName (optional) (default to taskId,taskTitle,taskDescription,dueDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Update task
-    api_response = api_instance.update_task(task_id, title, description, due_date, status, re_assignee_user_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.update_task(task_id, title, description, due_date, status, re_assignee_user_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->update_task: %s\n" % e)
@@ -741,10 +719,10 @@ Name | Type | Description  | Notes
  **due_date** | **str**| Due date | 
  **status** | **int**| Task status &lt;br/&gt; 1 - OPEN &lt;br/&gt; 2 - PERCENT_TWENTY &lt;br/&gt; 3 - PERCENT_FORTY &lt;br/&gt; 4 - PERCENT_SIXTY &lt;br/&gt; 5 - PERCENT_EIGHTY &lt;br/&gt; 6 - RESOLVED &lt;br/&gt; 7 - REOPENED | 
  **re_assignee_user_id** | **int**| re-assignee User Id | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)dueDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)status&lt;br/&gt;5)priority&lt;br/&gt;6)dueDate&lt;br/&gt;7)milestoneName&lt;br/&gt;8)groupType&lt;br/&gt;9)groupName | [optional] [default to taskId,taskTitle,taskDescription,dueDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -762,7 +740,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_task_status**
-> VerveResponseTask update_task_status(task_id, status, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseTask update_task_status(task_id, status, requester_id, client_token, fields=fields, access_token=access_token)
 
 Update task status
 
@@ -783,14 +761,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.ProjectManagementApi()
 task_id = 789 # int | taskId
 status = 56 # int | Task status <br/> 1 - OPEN <br/> 2 - PERCENT_TWENTY <br/> 3 - PERCENT_FORTY <br/> 4 - PERCENT_SIXTY <br/> 5 - PERCENT_EIGHTY <br/> 6 - RESOLVED <br/> 7 - REOPENED
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 fields = 'taskId,taskTitle,taskDescription,dueDate' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)dueDate<br/><b>A) Available values-</b><br/>1)taskId<br/>2)taskTitle<br/>3)taskDescription<br/>4)status<br/>5)priority<br/>6)dueDate<br/>7)milestoneName<br/>8)groupType<br/>9)groupName (optional) (default to taskId,taskTitle,taskDescription,dueDate)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Update task status
-    api_response = api_instance.update_task_status(task_id, status, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.update_task_status(task_id, status, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectManagementApi->update_task_status: %s\n" % e)
@@ -802,10 +780,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **task_id** | **int**| taskId | 
  **status** | **int**| Task status &lt;br/&gt; 1 - OPEN &lt;br/&gt; 2 - PERCENT_TWENTY &lt;br/&gt; 3 - PERCENT_FORTY &lt;br/&gt; 4 - PERCENT_SIXTY &lt;br/&gt; 5 - PERCENT_EIGHTY &lt;br/&gt; 6 - RESOLVED &lt;br/&gt; 7 - REOPENED | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
  **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)dueDate&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)taskId&lt;br/&gt;2)taskTitle&lt;br/&gt;3)taskDescription&lt;br/&gt;4)status&lt;br/&gt;5)priority&lt;br/&gt;6)dueDate&lt;br/&gt;7)milestoneName&lt;br/&gt;8)groupType&lt;br/&gt;9)groupName | [optional] [default to taskId,taskTitle,taskDescription,dueDate]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # iengage_client.SocialApi
 
-All URIs are relative to *https://api.iengage.io:8243/api/1.0*
+All URIs are relative to *https://api.iengage.io:8243/api/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **add_friend**
-> bool add_friend(id1, id2, logged_in_user_id, access_token, client_token)
+> bool add_friend(id1, id2, requester_id, client_token, access_token=access_token)
 
 Add Friend
 
@@ -40,13 +40,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.SocialApi()
 id1 = 'id1_example' # str | Enter userId/mailId of the person who wants to add a friend
 id2 = 'id2_example' # str | Enter userId /mailId you want to add in friend list
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Add Friend
-    api_response = api_instance.add_friend(id1, id2, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.add_friend(id1, id2, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->add_friend: %s\n" % e)
@@ -58,9 +58,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id1** | **str**| Enter userId/mailId of the person who wants to add a friend | 
  **id2** | **str**| Enter userId /mailId you want to add in friend list | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **confirm_friend_request**
-> bool confirm_friend_request(user_id, status, logged_in_user_id, access_token, client_token)
+> bool confirm_friend_request(user_id, status, requester_id, client_token, access_token=access_token)
 
 confirm/ignore friend request
 
@@ -99,13 +99,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId of user who sent friend request
 status = 56 # int | Set Friend Request status <br/> CONFIRM - 1  <br/> IGNORE - 2 
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # confirm/ignore friend request
-    api_response = api_instance.confirm_friend_request(user_id, status, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.confirm_friend_request(user_id, status, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->confirm_friend_request: %s\n" % e)
@@ -117,9 +117,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| userId of user who sent friend request | 
  **status** | **int**| Set Friend Request status &lt;br/&gt; CONFIRM - 1  &lt;br/&gt; IGNORE - 2  | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **follow**
-> bool follow(follower, followee, logged_in_user_id, access_token, client_token)
+> bool follow(follower, followee, requester_id, client_token, access_token=access_token)
 
 Follow user
 
@@ -158,13 +158,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.SocialApi()
 follower = 'follower_example' # str | Enter the userId/mailId of the follower
 followee = 'followee_example' # str | Enter the userId/mailId of the user the follower wants to follow
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Follow user
-    api_response = api_instance.follow(follower, followee, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.follow(follower, followee, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->follow: %s\n" % e)
@@ -176,9 +176,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **follower** | **str**| Enter the userId/mailId of the follower | 
  **followee** | **str**| Enter the userId/mailId of the user the follower wants to follow | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user**
-> VerveResponseUser get_user(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseUser get_user(user_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Get user by id 
 
@@ -216,14 +216,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
 user_id = 789 # int | User Id
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/>7)currentUserFollowing<br/>8)currentUserFriend<br/>9)equityScore (optional) (default to userId,firstName,lastName,profileImage)
+fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/> (optional) (default to userId,firstName,lastName,profileImage)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get user by id 
-    api_response = api_instance.get_user(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_user(user_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->get_user: %s\n" % e)
@@ -234,10 +234,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| User Id | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt;7)currentUserFollowing&lt;br/&gt;8)currentUserFriend&lt;br/&gt;9)equityScore | [optional] [default to userId,firstName,lastName,profileImage]
+ **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt; | [optional] [default to userId,firstName,lastName,profileImage]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_detail**
-> VerveResponseUserDetail get_user_detail(user_id, logged_in_user_id, access_token, client_token)
+> VerveResponseUserDetail get_user_detail(user_id, requester_id, client_token, access_token=access_token)
 
 Get user details 
 
@@ -275,13 +275,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
 user_id = 789 # int | Enter user Id whose details you need
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get user details 
-    api_response = api_instance.get_user_detail(user_id, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_user_detail(user_id, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->get_user_detail: %s\n" % e)
@@ -292,9 +292,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| Enter user Id whose details you need | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_followers**
-> VerveResponseUserList get_user_followers(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseUserList get_user_followers(user_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Get list of followers
 
@@ -331,15 +331,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
-user_id = 789 # int | userId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+user_id = 789 # int | User Id whose followers wants to get.
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/>7)currentUserFollowing<br/>8)currentUserFriend<br/>9)equityScore (optional) (default to userId,firstName,lastName,profileImage)
+fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/> (optional) (default to userId,firstName,lastName,profileImage)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of followers
-    api_response = api_instance.get_user_followers(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_user_followers(user_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->get_user_followers: %s\n" % e)
@@ -349,11 +349,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **int**| userId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **user_id** | **int**| User Id whose followers wants to get. | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt;7)currentUserFollowing&lt;br/&gt;8)currentUserFriend&lt;br/&gt;9)equityScore | [optional] [default to userId,firstName,lastName,profileImage]
+ **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt; | [optional] [default to userId,firstName,lastName,profileImage]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_following**
-> VerveResponseUserList get_user_following(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseUserList get_user_following(user_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Get list of users that are being followed
 
@@ -390,15 +390,15 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
-user_id = 789 # int | userId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+user_id = 789 # int | User Id whose followed list want to get
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/>7)currentUserFollowing<br/>8)currentUserFriend<br/>9)equityScore (optional) (default to userId,firstName,lastName,profileImage)
+fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/> (optional) (default to userId,firstName,lastName,profileImage)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of users that are being followed
-    api_response = api_instance.get_user_following(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_user_following(user_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->get_user_following: %s\n" % e)
@@ -408,11 +408,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **int**| userId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **user_id** | **int**| User Id whose followed list want to get | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt;7)currentUserFollowing&lt;br/&gt;8)currentUserFriend&lt;br/&gt;9)equityScore | [optional] [default to userId,firstName,lastName,profileImage]
+ **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt; | [optional] [default to userId,firstName,lastName,profileImage]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_friends**
-> VerveResponseUserList get_user_friends(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+> VerveResponseUserList get_user_friends(user_id, requester_id, client_token, fields=fields, access_token=access_token)
 
 Get list of friends
 
@@ -450,14 +450,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
 user_id = 789 # int | userId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
-fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/>7)currentUserFollowing<br/>8)currentUserFriend<br/>9)equityScore (optional) (default to userId,firstName,lastName,profileImage)
+fields = 'userId,firstName,lastName,profileImage' # str | Filter fields in result list<br/> <b>A) Default values -</b> <br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)profileImage<br/><b>A) Available values-</b><br/>1)userId<br/>2)firstName<br/>3)lastName<br/>4)emailId<br/>5)profileImage<br/>6)birthDate<br/> (optional) (default to userId,firstName,lastName,profileImage)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of friends
-    api_response = api_instance.get_user_friends(user_id, logged_in_user_id, access_token, client_token, fields=fields)
+    api_response = api_instance.get_user_friends(user_id, requester_id, client_token, fields=fields, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->get_user_friends: %s\n" % e)
@@ -468,10 +468,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| userId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
- **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt;7)currentUserFollowing&lt;br/&gt;8)currentUserFriend&lt;br/&gt;9)equityScore | [optional] [default to userId,firstName,lastName,profileImage]
+ **fields** | **str**| Filter fields in result list&lt;br/&gt; &lt;b&gt;A) Default values -&lt;/b&gt; &lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)profileImage&lt;br/&gt;&lt;b&gt;A) Available values-&lt;/b&gt;&lt;br/&gt;1)userId&lt;br/&gt;2)firstName&lt;br/&gt;3)lastName&lt;br/&gt;4)emailId&lt;br/&gt;5)profileImage&lt;br/&gt;6)birthDate&lt;br/&gt; | [optional] [default to userId,firstName,lastName,profileImage]
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_friend**
-> bool remove_friend(id1, id2, logged_in_user_id, access_token, client_token)
+> bool remove_friend(id1, id2, requester_id, client_token, access_token=access_token)
 
 Remove friend 
 
@@ -510,13 +510,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.SocialApi()
 id1 = 'id1_example' # str | Enter userId/mailId of the person who wants to remove from friend
 id2 = 'id2_example' # str | Enter userId /mailId you want to remove in friend list
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Remove friend 
-    api_response = api_instance.remove_friend(id1, id2, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.remove_friend(id1, id2, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->remove_friend: %s\n" % e)
@@ -528,9 +528,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id1** | **str**| Enter userId/mailId of the person who wants to remove from friend | 
  **id2** | **str**| Enter userId /mailId you want to remove in friend list | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **request_friend**
-> bool request_friend(user_id, logged_in_user_id, access_token, client_token)
+> bool request_friend(user_id, requester_id, client_token, access_token=access_token)
 
 Send friend request
 
@@ -568,13 +568,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
 user_id = 789 # int | Enter userId /mailId you want to send friend request
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Send friend request
-    api_response = api_instance.request_friend(user_id, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.request_friend(user_id, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->request_friend: %s\n" % e)
@@ -585,9 +585,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| Enter userId /mailId you want to send friend request | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **requests_for_me**
-> VerveResponseRequestForMeList requests_for_me(logged_in_user_id, access_token, client_token)
+> VerveResponseRequestForMeList requests_for_me(requester_id, client_token, access_token=access_token)
 
 Get list of friend requests
 
@@ -624,13 +624,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.SocialApi()
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of friend requests
-    api_response = api_instance.requests_for_me(logged_in_user_id, access_token, client_token)
+    api_response = api_instance.requests_for_me(requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->requests_for_me: %s\n" % e)
@@ -640,9 +640,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -660,7 +660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **unfollow**
-> bool unfollow(unfollower, unfollowee, logged_in_user_id, access_token, client_token)
+> bool unfollow(unfollower, unfollowee, requester_id, client_token, access_token=access_token)
 
 Unfollow user
 
@@ -681,13 +681,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.SocialApi()
 unfollower = 'unfollower_example' # str | Enter the userId/mailId of the unfollower
 unfollowee = 'unfollowee_example' # str | Enter the userId/mailId of the user the unfollower wants to unfollow
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Unfollow user
-    api_response = api_instance.unfollow(unfollower, unfollowee, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.unfollow(unfollower, unfollowee, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SocialApi->unfollow: %s\n" % e)
@@ -699,9 +699,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **unfollower** | **str**| Enter the userId/mailId of the unfollower | 
  **unfollowee** | **str**| Enter the userId/mailId of the user the unfollower wants to unfollow | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 

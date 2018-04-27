@@ -1,10 +1,12 @@
-# Tag
+# VerveResponseSentiment
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag_name** | **str** |  | [optional] 
-**count** | **int** |  | [optional] 
+**status_code** | **str** |  | [optional] 
+**message** | **str** |  | [optional] 
+**data** | [**Sentiment**](Sentiment.md) |  | [optional] 
+**records** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

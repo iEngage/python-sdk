@@ -1,6 +1,6 @@
 # iengage_client.RewardsApi
 
-All URIs are relative to *https://api.iengage.io:8243/api/1.0*
+All URIs are relative to *https://api.iengage.io:8243/api/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_top_friends**
-> VerveResponseUserPointsList get_top_friends(user_id, start, end, logged_in_user_id, access_token, client_token)
+> VerveResponseUserPointsList get_top_friends(user_id, start, end, requester_id, client_token, access_token=access_token)
 
 Get list of top friends
 
@@ -32,13 +32,13 @@ api_instance = iengage_client.RewardsApi()
 user_id = 789 # int | userId
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of top friends
-    api_response = api_instance.get_top_friends(user_id, start, end, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_top_friends(user_id, start, end, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RewardsApi->get_top_friends: %s\n" % e)
@@ -51,9 +51,9 @@ Name | Type | Description  | Notes
  **user_id** | **int**| userId | 
  **start** | **int**| start, initial value start from 0 | 
  **end** | **int**| end | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_top_users**
-> VerveResponseUserPointsList get_top_users(start, end, logged_in_user_id, access_token, client_token)
+> VerveResponseUserPointsList get_top_users(start, end, requester_id, client_token, access_token=access_token)
 
 Get list of top users
 
@@ -92,13 +92,13 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.RewardsApi()
 start = 56 # int | start, initial value start from 0
 end = 56 # int | end
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of top users
-    api_response = api_instance.get_top_users(start, end, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_top_users(start, end, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RewardsApi->get_top_users: %s\n" % e)
@@ -110,9 +110,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **int**| start, initial value start from 0 | 
  **end** | **int**| end | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_points**
-> VerveResponseUserPoints get_user_points(user_id, logged_in_user_id, access_token, client_token)
+> VerveResponseUserPoints get_user_points(user_id, requester_id, client_token, access_token=access_token)
 
 Get list of user points
 
@@ -149,14 +149,14 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.RewardsApi()
-user_id = 789 # int | userId
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+user_id = 789 # int | User Id whose points wants to get
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Get list of user points
-    api_response = api_instance.get_user_points(user_id, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.get_user_points(user_id, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling RewardsApi->get_user_points: %s\n" % e)
@@ -166,10 +166,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **int**| userId | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **user_id** | **int**| User Id whose points wants to get | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
