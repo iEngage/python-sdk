@@ -19,11 +19,11 @@ import unittest
 
 import iengage_client
 from iengage_client.rest import ApiException
-from iengage_client.models.interaction_category import InteractionCategory
+from iengage_client.models.association import Association
 
 
-class TestInteractionCategory(unittest.TestCase):
-    """ InteractionCategory unit test stubs """
+class TestAssociation(unittest.TestCase):
+    """ Association unit test stubs """
 
     def setUp(self):
         pass
@@ -31,11 +31,11 @@ class TestInteractionCategory(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInteractionCategory(self):
+    def testAssociation(self):
         """
-        Test InteractionCategory
+        Test Association
         """
-        model = iengage_client.models.interaction_category.InteractionCategory()
+        model = iengage_client.models.association.Association()
 
 
 if __name__ == '__main__':

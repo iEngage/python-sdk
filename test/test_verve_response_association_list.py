@@ -19,11 +19,11 @@ import unittest
 
 import iengage_client
 from iengage_client.rest import ApiException
-from iengage_client.models.interaction_category import InteractionCategory
+from iengage_client.models.verve_response_association_list import VerveResponseAssociationList
 
 
-class TestInteractionCategory(unittest.TestCase):
-    """ InteractionCategory unit test stubs """
+class TestVerveResponseAssociationList(unittest.TestCase):
+    """ VerveResponseAssociationList unit test stubs """
 
     def setUp(self):
         pass
@@ -31,11 +31,11 @@ class TestInteractionCategory(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInteractionCategory(self):
+    def testVerveResponseAssociationList(self):
         """
-        Test InteractionCategory
+        Test VerveResponseAssociationList
         """
-        model = iengage_client.models.interaction_category.InteractionCategory()
+        model = iengage_client.models.verve_response_association_list.VerveResponseAssociationList()
 
 
 if __name__ == '__main__':

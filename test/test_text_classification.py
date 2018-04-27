@@ -19,11 +19,11 @@ import unittest
 
 import iengage_client
 from iengage_client.rest import ApiException
-from iengage_client.models.interaction_category import InteractionCategory
+from iengage_client.models.text_classification import TextClassification
 
 
-class TestInteractionCategory(unittest.TestCase):
-    """ InteractionCategory unit test stubs """
+class TestTextClassification(unittest.TestCase):
+    """ TextClassification unit test stubs """
 
     def setUp(self):
         pass
@@ -31,11 +31,11 @@ class TestInteractionCategory(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testInteractionCategory(self):
+    def testTextClassification(self):
         """
-        Test InteractionCategory
+        Test TextClassification
         """
-        model = iengage_client.models.interaction_category.InteractionCategory()
+        model = iengage_client.models.text_classification.TextClassification()
 
 
 if __name__ == '__main__':
