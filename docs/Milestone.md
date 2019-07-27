@@ -10,6 +10,9 @@ Name | Type | Description | Notes
 **priority** | **int** |  | [optional] 
 **due_date** | **datetime** |  | [optional] 
 **created_date** | **datetime** |  | [optional] 
+**association_id** | **int** |  | [optional] 
+**never_due** | **bool** |  | [optional] [default to False]
+**user** | [**User**](User.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

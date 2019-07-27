@@ -16,6 +16,10 @@ Name | Type | Description | Notes
 **followers_count** | **int** |  | [optional] 
 **participants_count** | **int** |  | [optional] 
 **friends_participants_count** | **int** |  | [optional] 
+**association** | **int** |  | [optional] 
+**access_type** | **str** |  | [optional] 
+**manager_id** | **list[int]** |  | [optional] 
+**user** | [**User**](User.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

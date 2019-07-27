@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tag_id** | **int** |  | [optional] 
 **tag_name** | **str** |  | [optional] 
 **count** | **int** |  | [optional] 
 

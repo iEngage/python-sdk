@@ -1,6 +1,6 @@
 # iengage_client.UserAuthenticationApi
 
-All URIs are relative to *https://api.iengage.io:8243/api/1.0*
+All URIs are relative to *https://api.iengage.io:8243/api/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,13 +8,14 @@ Method | HTTP request | Description
 [**add_user**](UserAuthenticationApi.md#add_user) | **POST** /users | Add/Register new user
 [**authenticate**](UserAuthenticationApi.md#authenticate) | **GET** /authenticate | Authenticate User
 [**change_password**](UserAuthenticationApi.md#change_password) | **PUT** /users/password | Change password
+[**create_association**](UserAuthenticationApi.md#create_association) | **POST** /associations | Create association
 [**delete_user**](UserAuthenticationApi.md#delete_user) | **DELETE** /users/{userId} | Delete user
-[**get_organizations**](UserAuthenticationApi.md#get_organizations) | **GET** /organizations | Get list of organizations
+[**get_associations**](UserAuthenticationApi.md#get_associations) | **GET** /associations | Get list of associations
 [**logout**](UserAuthenticationApi.md#logout) | **GET** /logout | Logout
 
 
 # **add_notification_registered_id**
-> bool add_notification_registered_id(registered_id, type, logged_in_user_id, access_token, client_token)
+> bool add_notification_registered_id(registered_id, type, client_token, requester_id=requester_id, access_token=access_token)
 
 Add device token
 
@@ -22,7 +23,6 @@ Add device token to push notification from server
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -35,16 +35,16 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.UserAuthenticationApi()
 registered_id = 'registered_id_example' # str | Registered device token to be added
 type = 'type_example' # str | Type of device android, ios
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address. (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Add device token
-    api_response = api_instance.add_notification_registered_id(registered_id, type, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.add_notification_registered_id(registered_id, type, client_token, requester_id=requester_id, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->add_notification_registered_id: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->add_notification_registered_id: %s\n" % e
 ```
 
 ### Parameters
@@ -53,9 +53,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **registered_id** | **str**| Registered device token to be added | 
  **type** | **str**| Type of device android, ios | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | [optional] 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
@@ -81,7 +81,6 @@ Add/Register new user. Returns the user
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -109,7 +108,7 @@ try:
     api_response = api_instance.add_user(screen_name, email_id, password, client_token, first_name=first_name, middle_name=middle_name, last_name=last_name, birth_day=birth_day, birth_month=birth_month, birth_year=birth_year, addition_information=addition_information)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->add_user: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->add_user: %s\n" % e
 ```
 
 ### Parameters
@@ -152,7 +151,6 @@ Authenticate with username & password
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -172,7 +170,7 @@ try:
     api_response = api_instance.authenticate(user_name, password, client_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->authenticate: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->authenticate: %s\n" % e
 ```
 
 ### Parameters
@@ -199,7 +197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **change_password**
-> bool change_password(current_password, new_password, logged_in_user_id, access_token, client_token)
+> bool change_password(current_password, new_password, requester_id, client_token, access_token=access_token)
 
 Change password
 
@@ -207,7 +205,6 @@ Allows the user to change password. Returns true if successful
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -220,16 +217,16 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = iengage_client.UserAuthenticationApi()
 current_password = 'current_password_example' # str | Current password
 new_password = 'new_password_example' # str | New password
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Change password
-    api_response = api_instance.change_password(current_password, new_password, logged_in_user_id, access_token, client_token)
+    api_response = api_instance.change_password(current_password, new_password, requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->change_password: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->change_password: %s\n" % e
 ```
 
 ### Parameters
@@ -238,13 +235,69 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **current_password** | **str**| Current password | 
  **new_password** | **str**| New password | 
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
 **bool**
+
+### Authorization
+
+[default](../README.md#default)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_association**
+> VerveResponseAssociation create_association(name, requester_id, client_token, access_token=access_token)
+
+Create association
+
+Create association. Returns the association
+
+### Example 
+```python
+import time
+import iengage_client
+from iengage_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: default
+iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = iengage_client.UserAuthenticationApi()
+name = 'name_example' # str | association name
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
+client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
+
+try: 
+    # Create association
+    api_response = api_instance.create_association(name, requester_id, client_token, access_token=access_token)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling UserAuthenticationApi->create_association: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**| association name | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
+ **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
+
+### Return type
+
+[**VerveResponseAssociation**](VerveResponseAssociation.md)
 
 ### Authorization
 
@@ -266,7 +319,6 @@ Allows the user to delete user. Returns the deleted user
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -285,7 +337,7 @@ try:
     api_response = api_instance.delete_user(user_id, client_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->delete_user: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->delete_user: %s\n" % e
 ```
 
 ### Parameters
@@ -310,16 +362,15 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_organizations**
-> VerveResponseOrganizationList get_organizations(logged_in_user_id, access_token, client_token)
+# **get_associations**
+> VerveResponseAssociationList get_associations(requester_id, client_token, access_token=access_token)
 
-Get list of organizations
+Get list of associations
 
-Return the list of organizations
+Return the list of association
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -330,29 +381,29 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.UserAuthenticationApi()
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
-    # Get list of organizations
-    api_response = api_instance.get_organizations(logged_in_user_id, access_token, client_token)
+    # Get list of associations
+    api_response = api_instance.get_associations(requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->get_organizations: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->get_associations: %s\n" % e
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
-[**VerveResponseOrganizationList**](VerveResponseOrganizationList.md)
+[**VerveResponseAssociationList**](VerveResponseAssociationList.md)
 
 ### Authorization
 
@@ -366,7 +417,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **logout**
-> bool logout(logged_in_user_id, access_token, client_token)
+> bool logout(requester_id, client_token, access_token=access_token)
 
 Logout
 
@@ -374,7 +425,6 @@ Logout rest api session. Returns true if successful
 
 ### Example 
 ```python
-from __future__ import print_statement
 import time
 import iengage_client
 from iengage_client.rest import ApiException
@@ -385,25 +435,25 @@ iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = iengage_client.UserAuthenticationApi()
-logged_in_user_id = 'logged_in_user_id_example' # str | User id of logged / authenticated user
-access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
     # Logout
-    api_response = api_instance.logout(logged_in_user_id, access_token, client_token)
+    api_response = api_instance.logout(requester_id, client_token, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserAuthenticationApi->logout: %s\n" % e)
+    print "Exception when calling UserAuthenticationApi->logout: %s\n" % e
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logged_in_user_id** | **str**| User id of logged / authenticated user | 
- **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | 
+ **requester_id** | **str**| requesterId can be user id OR email address. | 
  **client_token** | **str**| Use the Client Token. Please generate it from the Applications section under the Production &amp; Sandbox tabs | 
+ **access_token** | **str**| Unique session token for user. To get access token user will have to authenticate | [optional] 
 
 ### Return type
 
