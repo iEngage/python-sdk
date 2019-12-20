@@ -53,19 +53,21 @@ from pprint import pprint
 
 # Configure OAuth2 access token for authorization: default
 iengage_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
-# create an instance of the API class
-api_instance = iengage_client.AugmentedIntelligenceApi
-text = 'text_example' # str | Text you want classified
-id = 789 # int | Classifier ID from the Admin Panel
-client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 
-try:
-    # Classifies using your classifier
-    api_response = api_instance.classify(text, id, client_token)
+# create an instance of the API class
+api_instance = iengage_client.InteractionApi()
+requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
+client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
+body = iengage_client.InteractionInputModel() # InteractionInputModel |  (optional)
+access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
+
+try: 
+    # Share interaction without attachment
+    api_response = api_instance.add_interaction(requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AugmentedIntelligenceApi->classify: %s\n" % e
-
+    print "Exception when calling InteractionApi->add_interaction: %s\n" % e
+    
 ```
 
 ## Documentation for API Endpoints
