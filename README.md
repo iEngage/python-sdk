@@ -59,6 +59,7 @@ api_instance = iengage_client.InteractionApi()
 requester_id = 'requester_id_example' # str | requesterId can be user id OR email address.
 client_token = 'client_token_example' # str | Use the Client Token. Please generate it from the Applications section under the Production & Sandbox tabs
 body = iengage_client.InteractionInputModel() # InteractionInputModel |  (optional)
+body.interaction_title = "Your text goes here" # This is where you should input your text
 access_token = 'access_token_example' # str | Unique session token for user. To get access token user will have to authenticate (optional)
 
 try: 
