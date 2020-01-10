@@ -67,7 +67,7 @@ try:
     api_response = api_instance.add_interaction(requester_id, client_token, body=body, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling InteractionApi->add_interaction: %s\n" % e
+    print("Exception when calling InteractionApi->add_interaction: %s\n" % e)
     
 ```
 
